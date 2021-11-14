@@ -11,9 +11,9 @@ def create_connection():
     try:
         conn = mydb = mysql.connector.connect(
     host="us-cdbr-east-04.cleardb.com",
-    user="bd157bd1e2a8d8",
-    password = "1b8272d0",
-    database="heroku_e9e0293aeac706c"
+    user="b33cdae453531f",
+    password = "6a5d5f6d",
+    database="heroku_edda316505ad5d8"
     )
         return conn
     except Error as e:
