@@ -9,7 +9,7 @@ import mysql.connector
 
 #Import from other module
 import fine_payment
-import database
+
 
 
 app = Flask(__name__)
@@ -26,9 +26,7 @@ def webhook():
     if (action == 'how_to_pay_fine'):
         return how_to_pay_fine(data)
  
-#setup connection to mySQL database
-database.create_connection()
-       
+      
 def how_to_pay_fine(data):
      reply = fine_payment.how_to_pay_fine(data) #To test webhook connection
      return jsonify(reply)

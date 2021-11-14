@@ -6,6 +6,12 @@ import requests
 import json
 import mysql.connector
 
+#Import from other module
+import database
+
+#setup connection to mySQL database
+database.create_connection()
+
 #To test webhook connection
 def how_to_pay_fine(data):
     reply = {}
