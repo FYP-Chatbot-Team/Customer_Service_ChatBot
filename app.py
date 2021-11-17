@@ -25,12 +25,35 @@ def webhook():
 
     if (action == 'how_to_pay_fine'):
         return how_to_pay_fine(data)
+
+    if (action == 'how_to_appeal'):
+        return how_to_appeal(data)
+
+    if (action == 'missed_court_date'):
+        return missed_court_date(data)
+
+    if (action == 'court_attendance_status'):
+        return court_attendance_status(data)
  
       
 def how_to_pay_fine(data):
-     reply = fine_payment.how_to_pay_fine(data) #To test webhook connection
+     reply = fine_payment.how_to_pay_fine(data) 
      return jsonify(reply)
     
+
+def how_to_appeal(data):
+     reply = fine_payment.how_to_appeal(data) 
+     return jsonify(reply)
+
+def missed_court_date(data):
+     reply = fine_payment.missed_court_date(data) 
+     return jsonify(reply)
+
+def court_attendance_status(data):
+     reply = fine_payment.court_attendance_status(data) 
+     return jsonify(reply)
+
+
 
 if __name__ == "__main__":
     app.run()

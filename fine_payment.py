@@ -10,27 +10,82 @@ import mysql.connector
 import database
 
 #setup connection to mySQL database
-conn = database.create_connection()
+
 
 #To test webhook connection
+#How to pay fine function
 def how_to_pay_fine(data):
     reply = {}
     msgs = []
-
+    conn = database.create_connection()
     with conn:
+          msgs.append({"text": {"text":["You can pay using the following option : "]}})
           cur = conn.cursor()
-          cur.execute("SELECT * FROM question where question_id = 1")
+          cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
           rows = cur.fetchall()
           for row in rows:
-               msgs.append({"text": {"text":[row]}})
-
-    
-   #msgs.append({"text": {"text":["You can pay using the following option : "]}})
-   #msgs.append({"text": {"text":["1. AXS Stations, E-Station, M-Station g"]}})
-   #msgs.append({"text": {"text":["2. All Post Officers (over the counter)"]}})
-   #msgs.append({"text": {"text":["3. SAM Kiosks, Mobile App, Web "]}})
-   #msgs.append({"text": {"text":["4. CSC Counter (Last Resort)"]}})
+                for response in row:
+                   msgs.append({"text": {"text":[response]}})
+                          
    
     reply["fulfillmentMessages"] = msgs
 
     return reply
+
+#How to appeal function
+def how_to_appeal(data):
+    reply = {}
+    msgs = []
+    conn = database.create_connection()
+    with conn:
+          cur = conn.cursor()
+          msgs.append({"text": {"text":["How to appeal ? Check the following scenario : "]}})
+          cur.execute("SELECT response_1 FROM question where question_id = 2")
+          rows = cur.fetchall()
+          for row in rows:
+                for response in row:
+                   msgs.append({"text": {"text":[response]}})
+                          
+   
+    reply["fulfillmentMessages"] = msgs
+
+    return reply
+
+#Missed Court Date function
+def missed_court_date(data):
+    reply = {}
+    msgs = []
+    conn = database.create_connection()
+    with conn:
+          cur = conn.cursor()
+          msgs.append({"text": {"text":["Missed your court date ? Check the following scenario : "]}})
+          cur.execute("SELECT response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 3")
+          rows = cur.fetchall()
+          for row in rows:
+                for response in row:
+                   msgs.append({"text": {"text":[response]}})
+                          
+   
+    reply["fulfillmentMessages"] = msgs
+
+    return reply
+
+#court_attendance_status function
+def court_attendance_status(data):
+    reply = {}
+    msgs = []
+    conn = database.create_connection()
+    with conn:
+          cur = conn.cursor()
+          msgs.append({"text": {"text":["Court attendance required after fine payment ? Check the following scenario : "]}})
+          cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 4")
+          rows = cur.fetchall()
+          for row in rows:
+                for response in row:                  
+                   msgs.append({"text": {"text":[response]}})
+                          
+   
+    reply["fulfillmentMessages"] = msgs
+
+    return reply
+
