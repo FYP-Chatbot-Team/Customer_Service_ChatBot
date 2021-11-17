@@ -10,18 +10,27 @@ import mysql.connector
 import database
 
 #setup connection to mySQL database
-database.create_connection()
+conn = database.create_connection()
 
 #To test webhook connection
 def how_to_pay_fine(data):
     reply = {}
     msgs = []
 
-    msgs.append({"text": {"text":["You can pay using the following option : "]}})
-    msgs.append({"text": {"text":["1. AXS Stations, E-Station, M-Station g"]}})
-    msgs.append({"text": {"text":["2. All Post Officers (over the counter)"]}})
-    msgs.append({"text": {"text":["3. SAM Kiosks, Mobile App, Web "]}})
-    msgs.append({"text": {"text":["4. CSC Counter (Last Resort)"]}})
+    with conn:
+          cur = conn.cursor()
+          cur.execute("SELECT * FROM question where question_id = 1")
+          rows = cur.fetchall()
+          for row in rows:
+               msgs.append({"text": {"text":[row]}})
+
+    
+   #msgs.append({"text": {"text":["You can pay using the following option : "]}})
+   #msgs.append({"text": {"text":["1. AXS Stations, E-Station, M-Station g"]}})
+   #msgs.append({"text": {"text":["2. All Post Officers (over the counter)"]}})
+   #msgs.append({"text": {"text":["3. SAM Kiosks, Mobile App, Web "]}})
+   #msgs.append({"text": {"text":["4. CSC Counter (Last Resort)"]}})
+   
     reply["fulfillmentMessages"] = msgs
 
     return reply
