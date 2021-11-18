@@ -18,15 +18,16 @@ def how_to_pay_fine(data):
     reply = {}
     msgs = []
     conn = database.create_connection()
-    with conn():
-          msgs.append({"text": {"text":["You can pay using the following option : "]}})
-          cur = conn.cursor()
-          cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
-          rows = cur.fetchall()
-          for row in rows:
-                for response in row:
-                   msgs.append({"text": {"text":[response]}})
+
+    msgs.append({"text": {"text":["You can pay using the following option : "]}})
+    cur = conn.cursor()
+    cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
+    rows = cur.fetchall()
+    for row in rows:
+         for response in row:
+              msgs.append({"text": {"text":[response]}})
                           
+          
    
     reply["fulfillmentMessages"] = msgs
 
