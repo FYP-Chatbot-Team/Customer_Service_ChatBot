@@ -20,6 +20,7 @@ def how_to_pay_fine(data):
     conn = database.create_connection()
 
     msgs.append({"text": {"text":["You can pay using the following option : "]}})
+
     cur = conn.cursor()
     cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
     rows = cur.fetchall()
@@ -38,14 +39,16 @@ def how_to_appeal(data):
     reply = {}
     msgs = []
     conn = database.create_connection()
-    with conn():
-          cur = conn.cursor()
-          msgs.append({"text": {"text":["How to appeal ? Check the following scenario : "]}})
-          cur.execute("SELECT response_1 FROM question where question_id = 2")
-          rows = cur.fetchall()
-          for row in rows:
-                for response in row:
+
+    cur = conn.cursor()
+    msgs.append({"text": {"text":["How to appeal ? Check the following scenario : "]}})
+    cur.execute("SELECT response_1 FROM question where question_id = 2")
+    rows = cur.fetchall()
+    for row in rows:
+          for response in row:
                    msgs.append({"text": {"text":[response]}})
+   
+          
                           
    
     reply["fulfillmentMessages"] = msgs
@@ -57,14 +60,14 @@ def missed_court_date(data):
     reply = {}
     msgs = []
     conn = database.create_connection()
-    with conn():
-          cur = conn.cursor()
-          msgs.append({"text": {"text":["Missed your court date ? Check the following scenario : "]}})
-          cur.execute("SELECT response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 3")
-          rows = cur.fetchall()
-          for row in rows:
-                for response in row:
-                   msgs.append({"text": {"text":[response]}})
+
+    cur = conn.cursor()
+    msgs.append({"text": {"text":["Missed your court date ? Check the following scenario : "]}})
+    cur.execute("SELECT response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 3")
+    rows = cur.fetchall()
+    for row in rows:
+          for response in row:
+               msgs.append({"text": {"text":[response]}})
                           
    
     reply["fulfillmentMessages"] = msgs
@@ -76,13 +79,13 @@ def court_attendance_status(data):
     reply = {}
     msgs = []
     conn = database.create_connection()
-    with conn():
-          cur = conn.cursor()
-          msgs.append({"text": {"text":["Court attendance required after fine payment ? Check the following scenario : "]}})
-          cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 4")
-          rows = cur.fetchall()
-          for row in rows:
-                for response in row:                  
+
+    cur = conn.cursor()
+    msgs.append({"text": {"text":["Court attendance required after fine payment ? Check the following scenario : "]}})
+    cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 4")
+    rows = cur.fetchall()
+    for row in rows:
+            for response in row:                  
                    msgs.append({"text": {"text":[response]}})
                           
    
