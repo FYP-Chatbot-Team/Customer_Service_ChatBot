@@ -33,7 +33,7 @@ def dumping_vs_waste(data):
     msgs = []
     conn = database.create_connection()
 
-    msgs.append({"text": {"text":[" #Illegal Dumping vs Bulky Waste : "]}})
+    msgs.append({"text": {"text":["Illegal Dumping vs Bulky Waste : "]}})
     cur = conn.cursor()
     cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6 FROM question where question_id = 6")
     rows = cur.fetchall()
