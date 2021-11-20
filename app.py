@@ -9,7 +9,7 @@ import mysql.connector
 
 #Import from other module
 import fine_payment
-
+import illegal_dumping
 
 
 app = Flask(__name__)
@@ -34,26 +34,37 @@ def webhook():
 
     if (action == 'court_attendance_status'):
         return court_attendance_status(data)
+
+    if (action == 'info_for_illegal_dumping'):
+        return info_for_illegal_dumping(data)
  
-      
+#######Fine payment#########   
+#How to pay fine function
 def how_to_pay_fine(data):
      reply = fine_payment.how_to_pay_fine(data) 
      return jsonify(reply)
     
-
+#How to appeal function
 def how_to_appeal(data):
      reply = fine_payment.how_to_appeal(data) 
      return jsonify(reply)
 
+#Missed Court Date function
 def missed_court_date(data):
      reply = fine_payment.missed_court_date(data) 
      return jsonify(reply)
 
+#court_attendance_status function
 def court_attendance_status(data):
      reply = fine_payment.court_attendance_status(data) 
      return jsonify(reply)
 
 
+###########Illegal Dumping###############
+#What information for illegal dumping function
+def info_for_illegal_dumping(data):
+     reply = illegal_dumping.info_for_illegal_dumping(data)
+     return jsonify(reply)
 
 if __name__ == "__main__":
     app.run()
