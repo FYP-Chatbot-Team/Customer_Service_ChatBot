@@ -37,6 +37,9 @@ def webhook():
 
     if (action == 'info_for_illegal_dumping'):
         return info_for_illegal_dumping(data)
+
+    if (action == 'dumping_vs_waste'):
+        return dumping_vs_waste(data)
  
 #######Fine payment#########   
 #How to pay fine function
@@ -64,6 +67,11 @@ def court_attendance_status(data):
 #What information for illegal dumping function
 def info_for_illegal_dumping(data):
      reply = illegal_dumping.info_for_illegal_dumping(data)
+     return jsonify(reply)
+
+#Illegal Dumping vs Bulky Waste
+def dumping_vs_waste(data):
+     reply =  illegal_dumping.dumping_vs_waste(data)
      return jsonify(reply)
 
 if __name__ == "__main__":
