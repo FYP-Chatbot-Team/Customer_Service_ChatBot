@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, g, session, url_for,redirect
 import datetime
 import os
 from google.cloud import dialogflow
@@ -11,13 +11,70 @@ import mysql.connector
 import fine_payment
 import illegal_dumping
 
+#Import from other module for log in system
+import user
+import database
+
+users = []
+users.append(user.User(id=1, username='admin', password='password123'))
 
 app = Flask(__name__)
+app.secret_key = 'FYPNEACHATBOTISTHEBEST12345'
 
+#To check if web service is running
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
+###########Log In system for rating from users#######
+@app.before_request
+def before_request():
+    g.user = None
+
+    if 'user_id' in session:
+        user = [x for x in users if x.id == session['user_id']][0]
+        g.user = user
+
+#To check if admin and password is correct 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        session.pop('user_id', None)
+
+        username = request.form['username']
+        password = request.form['password']
+        
+        user = [x for x in users if x.username == username][0]
+        if user and user.password == password:
+            session['user_id'] = user.id
+            return redirect(url_for('graph'))
+
+        return redirect(url_for('login'))
+
+    return render_template('login.html')
+
+
+
+@app.route('/graph')
+def graph():
+    if not g.user:
+        return redirect(url_for('login'))
+
+    data = [
+        ("1 star",3),
+        ("2 star",1),
+        ("3 star",10),
+        ("4 star",5),
+        ("5 star",12)
+        ]
+
+    labels = [row[0] for row in data]
+    values = [row[1] for row in data]
+
+    return render_template('graph.html', labels=labels , values=values)
+
+############Dialogflow##################
 @app.route('/webhook', methods=['POST'])
 def webhook():
     data = request.get_json(silent=True)   # get the incoming JSON structure
