@@ -11,7 +11,7 @@ import database
 
 
 #Advise for compoundable 26N LOR function
-def Need_go_to_court_for_settled_C14_fine(data):
+def Advise_for_compoundable_26N_LOR(data):
     reply = {}
     msgs = []
     conn = database.create_connection()
