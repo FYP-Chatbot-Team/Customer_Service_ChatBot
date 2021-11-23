@@ -97,6 +97,15 @@ def webhook():
 
     if (action == 'dumping_vs_waste'):
         return dumping_vs_waste(data)
+
+    if (action == 'team_in_charge_of_bulky_waste'):
+        return team_in_charge_of_bulky_waste(data)
+
+    if (action == 'team_in_charge_of_illegal_dumping'):
+        return team_in_charge_of_illegal_dumping(data)
+
+    if (action == 'Characteristics_of_illegal_dumping'):
+        return Characteristics_of_illegal_dumping(data)
  
 #######Fine payment#########   
 #How to pay fine function
@@ -131,5 +140,22 @@ def dumping_vs_waste(data):
      reply =  illegal_dumping.dumping_vs_waste(data)
      return jsonify(reply)
 
+ 
+ #Team in charge of bulky waste
+def team_in_charge_of_bulky_waste(data):
+     reply =  illegal_dumping.team_in_charge_of_bulky_waste(data)
+     return jsonify(reply)
+
+#Team in charge of illegal dumping
+def team_in_charge_of_illegal_dumping(data):
+     reply =  illegal_dumping.team_in_charge_of_illegal_dumping(data)
+     return jsonify(reply)
+
+#Characteristics of illegal dumping
+def Characteristics_of_illegal_dumping(data):
+     reply =  illegal_dumping.Characteristics_of_illegal_dumping(data)
+     return jsonify(reply)
+
 if __name__ == "__main__":
     app.run()
+
