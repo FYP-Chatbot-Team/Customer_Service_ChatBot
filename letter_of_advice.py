@@ -9,7 +9,7 @@ import mysql.connector
 #Import from other module
 import database
 
- #What to do for non-compoundable 26N LOA
+ #What to do for non-compoundable 26N LOA function
 def What_to_do_for_noncompoundable_26N_LOA(data):
     reply = {}
     msgs = []
@@ -28,7 +28,7 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
     return reply
 
 
-#What to bring for WOA execution
+#What to bring for WOA execution function
 def What_to_bring_for_WOA_execution(data):
     reply = {}
     msgs = []

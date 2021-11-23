@@ -27,7 +27,7 @@ def Advise_for_compoundable_26N_LOR(data):
 
     return reply
 
-#Must offender go to court for settled C14 fine? function
+#Must offender go to court for settled C14 fine function
 def Need_go_to_court_for_settled_C14_fine(data):
     reply = {}
     msgs = []

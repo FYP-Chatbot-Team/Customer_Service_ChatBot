@@ -12,6 +12,7 @@ import fine_payment
 import illegal_dumping
 import letter_of_reminder
 import letter_of_advice
+import work_instruction_for_sfa
 
 #Import from other module for log in system
 import user
@@ -127,6 +128,15 @@ def webhook():
     if (action == 'What_to_bring_for_WOA_execution'):
         return What_to_bring_for_WOA_execution(data)
 
+    ###########Work Instruction for SFA###############   
+    if (action == 'Non-urgent_SFA_cases'):
+        return Nonurgent_SFA_cases(data)
+
+    if (action == 'How_to_stop_SFA_rejecting_my_cases'):
+        return How_to_stop_SFA_rejecting_my_cases(data)
+
+    if (action == 'SFA_in_charge_of'):
+        return SFA_in_charge_of(data)
 
 
  
@@ -180,7 +190,7 @@ def Characteristics_of_illegal_dumping(data):
      return jsonify(reply)
 
 
- ###########Process for LOR###############
+###########Process for LOR###############
 #Need go to court for settled C14 fine
 def Need_go_to_court_for_settled_C14_fine(data):
     reply =  letter_of_reminder.Need_go_to_court_for_settled_C14_fine(data)
@@ -191,7 +201,7 @@ def Advise_for_compoundable_26N_LOR(data):
     reply =  letter_of_reminder.Advise_for_compoundable_26N_LOR(data)
     return jsonify(reply)
 
- ###########Process for LOA###############
+###########Process for LOA###############
  #What to do for non-compoundable 26N LOA
 def What_to_do_for_noncompoundable_26N_LOA(data):
     reply =  letter_of_advice.What_to_do_for_noncompoundable_26N_LOA(data)
@@ -200,6 +210,22 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
 #What to bring for WOA execution
 def What_to_bring_for_WOA_execution(data):
     reply =  letter_of_advice.What_to_bring_for_WOA_execution(data)
+    return jsonify(reply)
+
+###########Work Instruction for SFA###############   
+#Non-urgent SFA cases
+def Nonurgent_SFA_cases(data):
+    reply =  work_instruction_for_sfa.Nonurgent_SFA_cases(data)
+    return jsonify(reply)
+
+#How to stop SFA rejecting my cases
+def How_to_stop_SFA_rejecting_my_cases(data):
+    reply =  work_instruction_for_sfa.How_to_stop_SFA_rejecting_my_cases(data)
+    return jsonify(reply)
+
+#SFA in charge of
+def SFA_in_charge_of(data):
+    reply =  work_instruction_for_sfa.SFA_in_charge_of(data)
     return jsonify(reply)
 
 if __name__ == "__main__":
