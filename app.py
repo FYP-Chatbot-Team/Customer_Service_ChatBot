@@ -12,7 +12,7 @@ import fine_payment
 import illegal_dumping
 import letter_of_reminder
 import letter_of_advice
-import work_instruction_for_sfa
+import work
 
 #Import from other module for log in system
 import user
@@ -215,17 +215,17 @@ def What_to_bring_for_WOA_execution(data):
 ###########Work Instruction for SFA###############   
 #Non-urgent SFA cases
 def Nonurgent_SFA_cases(data):
-    reply =  work_instruction_for_sfa.Nonurgent_SFA_cases(data)
+    reply =  work.Nonurgent_SFA_cases(data)
     return jsonify(reply)
 
 #How to stop SFA rejecting my cases
 def How_to_stop_SFA_rejecting_my_cases(data):
-    reply =  work_instruction_for_sfa.How_to_stop_SFA_rejecting_my_cases(data)
+    reply =  work.How_to_stop_SFA_rejecting_my_cases(data)
     return jsonify(reply)
 
 #SFA in charge of
 def SFA_in_charge_of(data):
-    reply =  work_instruction_for_sfa.SFA_in_charge_of(data)
+    reply =  work.SFA_in_charge_of(data)
     return jsonify(reply)
 
 if __name__ == "__main__":
