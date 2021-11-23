@@ -23,6 +23,8 @@ def Advise_for_compoundable_26N_LOR(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -40,6 +42,8 @@ def Need_go_to_court_for_settled_C14_fine(data):
     for row in rows:
          for response in row:
               msgs.append({"text": {"text":[response]}})
+
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
     reply["fulfillmentMessages"] = msgs
 

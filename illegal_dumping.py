@@ -23,6 +23,8 @@ def info_for_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -41,6 +43,8 @@ def dumping_vs_waste(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -58,6 +62,8 @@ def team_in_charge_of_bulky_waste(data):
     for row in rows:
          for response in row:
               msgs.append({"text": {"text":[response]}})
+
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
 
     reply["fulfillmentMessages"] = msgs
@@ -78,6 +84,8 @@ def team_in_charge_of_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -95,6 +103,8 @@ def Characteristics_of_illegal_dumping(data):
     for row in rows:
          for response in row:
               msgs.append({"text": {"text":[response]}})
+
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
     reply["fulfillmentMessages"] = msgs
 
