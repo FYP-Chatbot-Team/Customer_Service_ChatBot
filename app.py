@@ -11,6 +11,7 @@ import mysql.connector
 import fine_payment
 import illegal_dumping
 import letter_of_reminder
+import letter_of_advice
 
 #Import from other module for log in system
 import user
@@ -119,6 +120,13 @@ def webhook():
         return Need_go_to_court_for_settled_C14_fine(data)
 
 
+    ###########Process for LOA###############
+    if (action == 'What_to_do_for_non-compoundable_26N_LOA'):
+        return What_to_do_for_noncompoundable_26N_LOA(data)
+
+    if (action == 'What_to_bring_for_WOA_execution?'):
+        return What_to_bring_for_WOA_execution(data)
+
 
 
  
@@ -183,6 +191,16 @@ def Advise_for_compoundable_26N_LOR(data):
     reply =  letter_of_reminder.Advise_for_compoundable_26N_LOR(data)
     return jsonify(reply)
 
+ ###########Process for LOA###############
+ #What to do for non-compoundable 26N LOA
+def What_to_do_for_noncompoundable_26N_LOA(data):
+    reply =  letter_of_advice.What_to_do_for_noncompoundable_26N_LOA(data)
+    return jsonify(reply)
+
+#What to bring for WOA execution
+def What_to_bring_for_WOA_execution(data):
+    reply =  letter_of_advice.What_to_bring_for_WOA_execution(data)
+    return jsonify(reply)
 
 if __name__ == "__main__":
     app.run()
