@@ -10,6 +10,7 @@ import mysql.connector
 #Import from other module
 import fine_payment
 import illegal_dumping
+import letter_of_reminder
 
 #Import from other module for log in system
 import user
@@ -80,6 +81,7 @@ def webhook():
     data = request.get_json(silent=True)   # get the incoming JSON structure
     action = data['queryResult']['action'] # get the action name associated with the matched intent
 
+     #######Fine payment#########   
     if (action == 'how_to_pay_fine'):
         return how_to_pay_fine(data)
 
@@ -92,6 +94,8 @@ def webhook():
     if (action == 'court_attendance_status'):
         return court_attendance_status(data)
 
+    
+     ###########Illegal Dumping###############
     if (action == 'info_for_illegal_dumping'):
         return info_for_illegal_dumping(data)
 
@@ -106,6 +110,17 @@ def webhook():
 
     if (action == 'Characteristics_of_illegal_dumping'):
         return Characteristics_of_illegal_dumping(data)
+
+     ###########Process for LOR###############
+    if (action == 'Advise_for_compoundable_26N_LOR'):
+       return Advise_for_compoundable_26N_LOR(data)
+
+    if (action == 'Need_go_to_court_for_settled_C14_fine'):
+        return Need_go_to_court_for_settled_C14_fine(data)
+
+
+
+
  
 #######Fine payment#########   
 #How to pay fine function
@@ -155,6 +170,19 @@ def team_in_charge_of_illegal_dumping(data):
 def Characteristics_of_illegal_dumping(data):
      reply =  illegal_dumping.Characteristics_of_illegal_dumping(data)
      return jsonify(reply)
+
+
+ ###########Process for LOR###############
+#Need go to court for settled C14 fine
+def Need_go_to_court_for_settled_C14_fine(data):
+    reply =  letter_of_reminder.Need_go_to_court_for_settled_C14_fine(data)
+    return jsonify(reply)
+
+#Advise for compoundable 26N LOR
+def Advise_for_compoundable_26N_LOR(data):
+    reply =  letter_of_reminder.Advise_for_compoundable_26N_LOR(data)
+    return jsonify(reply)
+
 
 if __name__ == "__main__":
     app.run()
