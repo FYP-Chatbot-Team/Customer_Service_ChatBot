@@ -84,7 +84,15 @@ def team_in_charge_of_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"image":{"imageUri":"https://www.nea.gov.sg/images/default-source/about-us/nea-logo.png"}})
+    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipMdeY4Qns7fr5nNU7gQb-o0VUKyPxNpErXdEj5Z"}})
+
+    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipPaB2JmxpKcBkw-mQCwyaammYDL5XkwTpIwH8kg"}})
+
+    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipMy_NJ9fVLBH9FuT7WWeMnQ-t35AEghijiZAV_s"}})
+
+    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipNTThKperT8A6huo5wuCYvVB3706zBX_nhKIkEz"}})
+
+    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipPLd_JnZnf-BgH2AoqMydkN3ueGPtkm075sEvvu"}})
 
     msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
