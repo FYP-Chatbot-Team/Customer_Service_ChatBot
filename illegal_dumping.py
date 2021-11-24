@@ -84,15 +84,15 @@ def team_in_charge_of_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipMdeY4Qns7fr5nNU7gQb-o0VUKyPxNpErXdEj5Z"}})
+    msgs.append({"image":{"imageUri":"https://lh3.googleusercontent.com/cqs26hUeLR9fffNJuljYbhgjzdpbWMj7nF5yU0YzRbGvBIoLpwp1vgZrrk21Dcm5W0NjTrQkW-lUSDSCOoURRb24Mw4l34CFWIZrsgn3s3haovutIPbBkMXQCqOSpVrxuNgY6SUV87agpPo6hk9yri4cstnhgooSuNCEH20RuY11dHKC1-TZ4DC7d4n-fg0mJEt8PwJm1QwwVCAdWNzz7E2HtPNNJDacfT4Rd2lMidWKj4J3dFq-ZL83qKgYS53PDnKf2_XHXlgWaThJFcR0kieLUm80GOHxeFZMyuyxMRIUIXCEflxnOiaSjm_So_RzwQjey_pCynILYNieyOtbmL5O7FfU4E8breHYDInZIBs2JIBY9Or20nGOGRpe9gXSu2SShWoGEx8yx0DmuyOlGAPhIrHuootyMJxOxyuKiL-9IltaVPa_ZP8c1UXB3R3e2m5YxAQqWaQpLVmgnF3SGhbp9ouf-DrWlT3wGox4pIPQgbBJ_2DGon0M8icn5pGtRiXib-9eowGhuqfJEkWubGmyLOjhAPuz4mvz76MtVWvvKYU9bcT3qBY5iSynXqx_HfXwXBwaGC3iDJ0UHG5DLLq_iJImXz917I0R7zOfhOCFb7ccOdtxMSihqlAnkq15tQNVQbqefbvbC61USFL_yy7BX35H8DpEUTRCibwOJmssEzbiue1_1eGpEtPnTCjAokH-XOfbxTVfB8DkF0n48A=w1355-h559-no?authuser=2"}})
 
-    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipPaB2JmxpKcBkw-mQCwyaammYDL5XkwTpIwH8kg"}})
+    msgs.append({"image":{"imageUri":"https://lh3.googleusercontent.com/0bYS-cG5t2TTkFg8o04Csfot6dfvBurBzswVpBjPmeHOQztHkoXRGa1rjRgP7fyCJ6R1zn1SmdDhmYO3oXJLCeKGcgbY5acQj1xv1jJk2Ujqh9-iUIiUSSS7aY5aeDXsQnOG-u8BLErdTYFYdrUT7Jr337nx-mzJDlNeIJxCVOXkpxeFWMm40LL5tEGspq8aRpWpXkHuYMbhPD8mkBxYVw08pDJx-7ZuXY2mvKjaD8nim1nrHZxaL4PwSVA8as0ZVUmz8SKsAx5cUDVuFO-GgBGJO8-2UIrTafiyA5myap5oaFR3iHM8ptyHWvD-wSiiwiusOXPqnMC8H6LRZvZsFOPn82wjC8fztBCkLSSQD9FVPFx-x_l2R9-DvenCEXGeujPIXZu5xal6us82yQCq_wmtaz-PxCJATlxoUmRG-qs9VSGVH8jZT3XALL3C9kIHwB5MoGl5ztz-XVvI_H7ghgFOWM3FDsQXD-PWSEIO4hJv2K6x23NNKZUJvV1X4XKDH_fXo6oNEEAxhT0w_v_LVnBjBtmchvC677At1Njb9r9x9m-rQPi9MKvUvGkKrOyILhb9js8Br4R8P8f1FKWNBn6Vg2VDuQESk1mjyvhkCPHPMKwakuN9Pjs8fTwmSHA_ubciNH4hD-_Q4VCjZySD4ORsmkc-r_DEHsLcX6zxgTsr8eY6cS_H_FTZ9A6y2Tf5137hofzmUt2nrqPjE9UKgg=w804-h705-no?authuser=2"}})
 
-    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipMy_NJ9fVLBH9FuT7WWeMnQ-t35AEghijiZAV_s"}})
+    msgs.append({"image":{"imageUri":""}})
 
-    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipNTThKperT8A6huo5wuCYvVB3706zBX_nhKIkEz"}})
+    msgs.append({"image":{"imageUri":""}})
 
-    msgs.append({"image":{"imageUri":"https://photos.google.com/u/2/photo/AF1QipPLd_JnZnf-BgH2AoqMydkN3ueGPtkm075sEvvu"}})
+    msgs.append({"image":{"imageUri":""}})
 
     msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
