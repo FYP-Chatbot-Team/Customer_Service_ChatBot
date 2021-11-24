@@ -84,7 +84,7 @@ def team_in_charge_of_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"image":{"imageuri":"https://www.nea.gov.sg/images/default-source/about-us/nea-logo.png"}})
+    msgs.append({"image":{"imageUri":"https://www.nea.gov.sg/images/default-source/about-us/nea-logo.png"}})
 
     msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
