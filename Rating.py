@@ -23,11 +23,15 @@ def rating_function(data):
     comment = data['queryResult']['parameters']['comment']
     rating = data['queryResult']['parameters']['rating']
 
+    print(name)
+
     sql = "INSERT INTO customer_rating (customer_name, comment, rating) VALUES (%s, %s, %s)"
     val = (name, comment, rating)
     cur.execute(sql,val)
 
     conn.commit()
+
+    print(mycursor.rowcount, "record inserted.")
 
     message = "Thank you " + name + " for giving us a rating."
 
