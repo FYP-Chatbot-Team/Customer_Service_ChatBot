@@ -13,6 +13,7 @@ import illegal_dumping
 import letter_of_reminder
 import letter_of_advice
 import work
+import Rating
 
 #Import from other module for log in system
 import user
@@ -138,6 +139,9 @@ def webhook():
     if (action == 'SFA_in_charge_of'):
         return SFA_in_charge_of(data)
 
+    ###########Rating Function############### 
+    if (action == 'rating_function'):
+        return rating_function(data)
 
  
 #######Fine payment#########   
@@ -227,6 +231,15 @@ def How_to_stop_SFA_rejecting_my_cases(data):
 def SFA_in_charge_of(data):
     reply =  work.SFA_in_charge_of(data)
     return jsonify(reply)
+
+
+###########Rating Function###############   
+def rating_function(data):
+    reply =  Rating.rating_function(data)
+    return jsonify(reply)
+
+
+
 
 if __name__ == "__main__":
     app.run()
