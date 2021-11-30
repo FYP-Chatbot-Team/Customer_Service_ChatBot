@@ -49,7 +49,14 @@ def how_to_appeal(data):
           for response in row:
                    msgs.append({"text": {"text":[response]}})
    
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})      
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}}) 
+    msgs.append( {
+        "quickReplies": {
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})
                           
    
     reply["fulfillmentMessages"] = msgs
@@ -72,6 +79,14 @@ def missed_court_date(data):
                           
     msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
+    msgs.append( {
+        "quickReplies": {
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})
+
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -90,7 +105,15 @@ def court_attendance_status(data):
             for response in row:                  
                    msgs.append({"text": {"text":[response]}})
     
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})              
+    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})   
+    
+    msgs.append({
+        "quickReplies": {
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})
    
     reply["fulfillmentMessages"] = msgs
 
