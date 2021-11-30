@@ -23,7 +23,15 @@ def info_for_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 
@@ -43,8 +51,15 @@ def dumping_vs_waste(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
-
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -63,7 +78,15 @@ def team_in_charge_of_bulky_waste(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
 
     reply["fulfillmentMessages"] = msgs
@@ -94,7 +117,15 @@ def team_in_charge_of_illegal_dumping(data):
 
     msgs.append({"image":{"imageUri":"https://lh3.googleusercontent.com/JEy6nbtGklrhThq8OubrXouJLc1r9FI-GOISExge4ZZjafCSLf1mck_upBOspeBQTXMXgd_iHE1xfCPyaHA2yV_bOsZZhukS7-44J-nHWKQRbfJRYeSTqw7PljJAL5wJckspccuN-WEDNqAW1ItdFACK_WbpCaaswNVGMJ56pDobrmD5Q8vgE6PJlbwfXBOIw5ugtmTPyTEbuLcnCGAhbAeAKnkmyxk10bft4JgfsDsO-FVjvSoSyWAmr8of9oYXFfdh8freBi82JJAvtKTiWHJeAVXlTlafLiY8FRabOT3BgQHuBnERMFW5Srb_l1zmrYyrU_J9HAclcU1yPjaf7b6LCPBLnZEAFPgDXxuqej-3AJVs_bJVnNk0Y3srK-YT-iMj3d84wsdBJsv3J23b_1GUMm-QEN3n2A-wa1F9-izVVYKbud1osnsJVJDxlNfNGNeKvc6cNX9nfpeEsQfK1fnDVVS9F_jovW3BjIfihNwKZtGzuOWetBbePbZ6sP8HLBzEAlZ-y5usCsoIcy5-UcgMDesZkNoLrTDgFR7eOEBVbJ_tDog2dc4sGFZqTaA_iOJTeNuR1JVFgUOUb_IDcXDI3B-GQ49pdLriTg9sqE7PFnp8Zv3P25W0Ovj7Qi4p7nLAwQ8j3kzhWiDTqluczKHHtC92stgWkEDybLidJqC3QFFkKEUleGIii-LLz2LIvYqTDC7_MUNKG7wRUw7m0g=w581-h356-no?authuser=2"}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 
@@ -114,7 +145,15 @@ def Characteristics_of_illegal_dumping(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 

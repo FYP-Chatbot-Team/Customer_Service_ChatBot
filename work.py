@@ -23,7 +23,15 @@ def Nonurgent_SFA_cases(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 
@@ -46,7 +54,15 @@ def How_to_stop_SFA_rejecting_my_cases(data):
 
     msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
 
-    reply["fulfillmentMessages"] = msgs
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     return reply
 
@@ -65,7 +81,15 @@ def SFA_in_charge_of(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 

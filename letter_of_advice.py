@@ -23,7 +23,15 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 
@@ -44,7 +52,15 @@ def What_to_bring_for_WOA_execution(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 

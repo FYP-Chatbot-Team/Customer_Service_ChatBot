@@ -23,7 +23,15 @@ def Advise_for_compoundable_26N_LOR(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 
@@ -43,7 +51,15 @@ def Need_go_to_court_for_settled_C14_fine(data):
          for response in row:
               msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
+       
+    msgs.append( {
+        "quickReplies": {
+          "title": "Do you need anymore enquries ? 😊",
+          "quickReplies": [
+            "Yes",
+            "No"
+          ]
+        }})    
 
     reply["fulfillmentMessages"] = msgs
 
