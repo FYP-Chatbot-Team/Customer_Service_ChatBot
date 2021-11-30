@@ -74,7 +74,7 @@ def graph():
     star3 = 0
     star4 = 0
     star5 = 0
-    cur.execute("SELECT customer_name,commment,rating FROM customer_rating")
+    cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
     rows = cur.fetchall()
     for row in rows:
          for rating in row:
