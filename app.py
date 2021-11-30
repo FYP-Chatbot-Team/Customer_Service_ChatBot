@@ -77,14 +77,13 @@ def graph():
     cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
     rows = cur.fetchall()
     for row in rows:
-         for rating in row:
-              if(rating[2]==1):
+              if(row[2]==1):
                   star1+=1
-              elif(rating[2]==2):
+              elif(row[2]==2):
                   star2+=1
-              elif(rating[2]==3):
+              elif(row[2]==3):
                   star3+=1
-              elif(rating[2]==4):
+              elif(row[2]==4):
                   star4+=1
               else:
                   star5+=1
