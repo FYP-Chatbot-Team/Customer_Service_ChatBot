@@ -65,12 +65,35 @@ def graph():
     if not g.user:
         return redirect(url_for('login'))
 
+    conn = database.create_connection()
+    cur = conn.cursor()
+
+    #Rating Graph
+    star1 = 0
+    star2 = 0
+    star3 = 0
+    star4 = 0
+    star5 = 0
+    cur.execute("SELECT customer_name,commment,rating FROM cusotmer_rating")
+    rows = cur.fetchall()
+    for row in rows:
+         for rating in row:
+              if(rating[2]==1):
+                  star1+=1
+              elif(rating[2]==2):
+                  star2+=1
+              elif(rating[2]==3):
+                  star3+=1
+              elif(rating[2]==4):
+                  star4+=1
+              else:
+                  star5+=1
     data = [
-        ("1 star",3),
-        ("2 star",1),
-        ("3 star",10),
-        ("4 star",5),
-        ("5 star",12)
+        ("1 star",star1),
+        ("2 star",star2),
+        ("3 star",star3),
+        ("4 star",star4),
+        ("5 star",star5)
         ]
 
     labels = [row[0] for row in data]
