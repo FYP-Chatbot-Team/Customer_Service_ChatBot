@@ -51,10 +51,7 @@ def How_to_stop_SFA_rejecting_my_cases(data):
     for row in rows:
          for response in row:
               msgs.append({"text": {"text":[response]}})
-
-    msgs.append({"text": {"text":["Do you need anymore enquries ? 😊"]}})
-
-       
+    
     msgs.append( {
         "quickReplies": {
           "title": "Do you need anymore enquries ? 😊",
