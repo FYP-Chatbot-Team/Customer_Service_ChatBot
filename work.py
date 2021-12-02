@@ -61,6 +61,8 @@ def How_to_stop_SFA_rejecting_my_cases(data):
           ]
         }})    
 
+    reply["fulfillmentMessages"] = msgs
+
     return reply
 
 
