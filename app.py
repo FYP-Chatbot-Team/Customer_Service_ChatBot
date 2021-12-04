@@ -111,7 +111,7 @@ def graph():
 
 #Comment Page
 @app.route('/comment')
-def home():
+def comment():
     if not g.user:
         return redirect(url_for('login'))
 
