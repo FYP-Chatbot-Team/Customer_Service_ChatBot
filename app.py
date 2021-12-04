@@ -122,8 +122,15 @@ def graph():
 def comment():
     if not g.user:
         return redirect(url_for('login'))
+    
+    conn = database.create_connection()
+    cur = conn.cursor()
 
-    return render_template('comment.html')
+    cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
+    comment = cur.fetchall()
+
+
+    return render_template('comment.html', comment = comment )
 
 ############Dialogflow##################
 @app.route('/webhook', methods=['POST'])
