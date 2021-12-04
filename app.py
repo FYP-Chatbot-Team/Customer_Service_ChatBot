@@ -108,6 +108,15 @@ def graph():
 
     return render_template('graph.html', labels=labels , values=values)
 
+
+#Comment Page
+@app.route('/comment')
+def home():
+    if not g.user:
+        return redirect(url_for('login'))
+
+    return render_template('comment.html')
+
 ############Dialogflow##################
 @app.route('/webhook', methods=['POST'])
 def webhook():

@@ -39,36 +39,7 @@
         </div>
     </div>
 
-    <!--Graph-->
-    <center><h1>Customer Rating for NEA Chat Bot</h1></center>
-    <center><canvas id="myChart" width="500" height="400"></canvas></center>
-    <script>
-    var ctx = document.getElementById("myChart");
-    var Barchart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: {{ labels | safe }},
-        datasets: [{
-                label: "Rating points",
-                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                data: {{ values | safe }}
-            }]
-            },
-        options: {
-            legend: { display: false },
-            title: {
-                display: true,
-                text: 'Rating of customer'
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-        });
-    </script>
+    <!--Home-->
+    <center><h1>NEA Chat Bot Home Page</h1></center>
 </body>
 </html>
