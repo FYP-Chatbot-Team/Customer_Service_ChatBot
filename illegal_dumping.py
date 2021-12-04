@@ -101,7 +101,7 @@ def team_in_charge_of_illegal_dumping(data):
 
     msgs.append({"text": {"text":["Which team in charge of Illegal Dumping ? : "]}})
     cur = conn.cursor()
-    cur.execute("SELECT response_1 FROM question where question_id = 8")
+    cur.execute("SELECT  response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 8")
     rows = cur.fetchall()
     for row in rows:
          for response in row:
