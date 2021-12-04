@@ -58,6 +58,15 @@ def login():
 
     return render_template('login.html')
 
+
+#Logout 
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    flash('You were logged out.')
+    return redirect(url_for('login'))
+
+
 #Home Page
 @app.route('/home')
 def home():
