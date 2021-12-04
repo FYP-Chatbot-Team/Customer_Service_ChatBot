@@ -59,8 +59,8 @@ def login():
     return render_template('login.html')
 
 #Home Page
-@app.route('/home')
-def graph():
+#@app.route('/home')
+def home():
     if not g.user:
         return redirect(url_for('login'))
 
