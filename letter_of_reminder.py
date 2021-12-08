@@ -26,7 +26,7 @@ def Advise_for_compoundable_26N_LOR(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -54,7 +54,7 @@ def Need_go_to_court_for_settled_C14_fine(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"

@@ -26,7 +26,7 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -55,7 +55,7 @@ def What_to_bring_for_WOA_execution(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"

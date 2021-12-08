@@ -30,7 +30,7 @@ def how_to_pay_fine(data):
      
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -57,7 +57,7 @@ def how_to_appeal(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -85,7 +85,7 @@ def missed_court_date(data):
                                  
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -113,7 +113,7 @@ def court_attendance_status(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"

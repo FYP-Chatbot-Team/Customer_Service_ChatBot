@@ -26,7 +26,7 @@ def Nonurgent_SFA_cases(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -54,7 +54,7 @@ def How_to_stop_SFA_rejecting_my_cases(data):
     
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -83,7 +83,7 @@ def SFA_in_charge_of(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"

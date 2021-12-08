@@ -26,7 +26,7 @@ def info_for_illegal_dumping(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -54,7 +54,7 @@ def dumping_vs_waste(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -81,7 +81,7 @@ def team_in_charge_of_bulky_waste(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -109,7 +109,7 @@ def team_in_charge_of_illegal_dumping(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
@@ -137,7 +137,7 @@ def Characteristics_of_illegal_dumping(data):
        
     msgs.append( {
         "quickReplies": {
-          "title": "Do you need anymore enquries ? 😊",
+          "title": "Do you need anymore enquires ? 😊",
           "quickReplies": [
             "Yes",
             "No"
