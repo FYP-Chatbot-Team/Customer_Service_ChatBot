@@ -11,35 +11,38 @@
 </head>
 <body>
     <!--Link Tab-->
-    <div class="col-10">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg col-12" style="background-color:aliceblue" role="navigation">
-                <div>
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <h4 class="text-center text-primary">
-                                Welcome admin
-                            </h4>
-                            <h4 class="text-center text-primary">
-                                <a href="{{url_for('logout')}}">Logout</a>
-                            </h4>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url_for('home')}}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url_for('graph')}}">Customer Rating Graph</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url_for('comment')}}">Customer Comment</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    <div class="row">
+        <div class="col-2">
+            <h4 class="text-center text-primary">
+                Welcome Admin
+            </h4>
+            <h4 class="text-center text-primary">
+                <a href="{{url_for('logout')}}" class="nav-link">Logout</a>
+            </h4>
+        </div>
+        <div class="col-10">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg col-12" style="background-color:aliceblue" role="navigation">
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="{{url_for('home')}}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{url_for('graph')}}">Customer Rating Graph</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{url_for('comment')}}">Customer Comment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     </div>
+       
 
-    <!--Home-->
-    <center><h1>NEA Chat Bot Home Page</h1></center>
+        <!--Home-->
+        <center><h1>NEA Chat Bot Home Page</h1></center>
 </body>
 </html>
