@@ -34,6 +34,7 @@ def how_to_pay_fine(data):
     ######Firebase######
     ref = db.reference("/Questions/Qn1/")
 
+
     row = ref.get()
     for row in rows:
           for response in row:
