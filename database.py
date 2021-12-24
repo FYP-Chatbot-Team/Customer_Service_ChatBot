@@ -22,8 +22,4 @@ def create_connection():
     return None
 
 
-def create_firebase_connection():
-    cred_obj = firebase_admin.credentials.Certificate('nea-database-b96f8-firebase-adminsdk-mo1sn-a344a5de3b.json')
-    default_app = firebase_admin.initialize_app(cred_object, {
-	'databaseURL':'https://nea-database-b96f8-default-rtdb.asia-southeast1.firebasedatabase.app/'
-	})
+
