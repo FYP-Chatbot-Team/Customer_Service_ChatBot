@@ -5,12 +5,14 @@ from google.cloud import dialogflow
 import requests
 import json
 import mysql.connector
-
+import firebase_admin
+from firebase_admin import db
 #Import from other module
 import database
 
 
-
+#Connect to firebase database
+database.create_firebase_connection()
 
 #To test webhook connection
 #How to pay fine function
@@ -18,16 +20,22 @@ def how_to_pay_fine(data):
     reply = {}
     msgs = []
     conn = database.create_connection()
+    ######SQL######
+    #msgs.append({"text": {"text":["You can pay using the following option : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
 
-    msgs.append({"text": {"text":["You can pay using the following option : "]}})
+    ######Firebase######
+    ref = db.reference("/Questions/Qn1/")
 
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
-    rows = cur.fetchall()
+    row = ref.get()
     for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
-     
+          for response in row:
+                   msgs.append({"text": {"text":[response]}})
     msgs.append( {
         "quickReplies": {
           "title": "Do you need anymore enquires ? 😊",

@@ -1,4 +1,5 @@
 {
   "SuppressEnvironmentCreationPrompt": true,
-  "Interpreter": "Workspace|Workspace|env"
+  "Interpreter": "Workspace|Workspace|env",
+  "SuppressPackageInstallationPrompt": true
 }
