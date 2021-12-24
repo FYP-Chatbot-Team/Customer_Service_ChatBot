@@ -35,10 +35,9 @@ def how_to_pay_fine(data):
     ref = db.reference("/Questions/Qn1/")
 
 
-    rows = ref.get()
+    rows = ref.Get()
     for row in rows:
-             value = row.val()
-             msgs.append({"text": {"text":[value]}})
+             msgs.append({"text": {"text":[row]}})
     msgs.append( {
         "quickReplies": {
           "title": "Do you need anymore enquires ? 😊",
