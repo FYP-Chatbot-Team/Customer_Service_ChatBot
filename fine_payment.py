@@ -37,8 +37,7 @@ def how_to_pay_fine(data):
 
     rows = ref.get()
     for row in rows:
-          for response in row:
-                   msgs.append({"text": {"text":[response]}})
+             msgs.append({"text": {"text":[row]}})
     msgs.append( {
         "quickReplies": {
           "title": "Do you need anymore enquires ? 😊",
