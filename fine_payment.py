@@ -35,7 +35,7 @@ def how_to_pay_fine(data):
     ref = db.reference("/Questions/Qn1/")
 
 
-    row = ref.get()
+    rows = ref.get()
     for row in rows:
           for response in row:
                    msgs.append({"text": {"text":[response]}})
