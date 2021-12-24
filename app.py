@@ -66,15 +66,6 @@ def logout():
     return redirect(url_for('login'))
 
 
-#Home Page
-@app.route('/home')
-def home():
-    if not g.user:
-        return redirect(url_for('login'))
-
-    return render_template('home.html')
-
-
 #Graph Page
 @app.route('/graph')
 def graph():
