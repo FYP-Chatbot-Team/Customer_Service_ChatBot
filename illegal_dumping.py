@@ -13,15 +13,23 @@ import database
 def info_for_illegal_dumping(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["The following details should be obtain for illegal dumping : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6,response_7,response_8 FROM question where question_id = 5")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["The following details should be obtain for illegal dumping : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6,response_7,response_8 FROM question where question_id = 5")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #    for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+     ######Firebase######
+    ref = db.reference("/Questions/Qn5/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
 
        
     msgs.append( {
@@ -41,15 +49,22 @@ def info_for_illegal_dumping(data):
 def dumping_vs_waste(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["Illegal Dumping vs Bulky Waste : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6 FROM question where question_id = 6")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["Illegal Dumping vs Bulky Waste : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6 FROM question where question_id = 6")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+    ######Firebase######
+    ref = db.reference("/Questions/Qn6/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
 
        
     msgs.append( {
@@ -68,15 +83,23 @@ def dumping_vs_waste(data):
 def team_in_charge_of_bulky_waste(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["Which team in charge of Bulky waste ? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1 FROM question where question_id = 7")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["Which team in charge of Bulky waste ? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1 FROM question where question_id = 7")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+      ######Firebase######
+    ref = db.reference("/Questions/Qn7/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
+
 
        
     msgs.append( {
@@ -97,15 +120,22 @@ def team_in_charge_of_bulky_waste(data):
 def team_in_charge_of_illegal_dumping(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["Which team in charge of Illegal Dumping ? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT  response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 8")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"image": {"imageUri":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["Which team in charge of Illegal Dumping ? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT  response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 8")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"image": {"imageUri":[response]}})
+
+      ######Firebase######
+    ref = db.reference("/Questions/Qn8/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"image": {"imageUri":[val]}}) 
        
     msgs.append( {
         "quickReplies": {
@@ -124,15 +154,22 @@ def team_in_charge_of_illegal_dumping(data):
 def Characteristics_of_illegal_dumping(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["What is the characteristic of illegal dumping ? Read below to know more : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 9")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["What is the characteristic of illegal dumping ? Read below to know more : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 9")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+        ######Firebase######
+    ref = db.reference("/Questions/Qn9/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}})
 
        
     msgs.append( {
