@@ -158,6 +158,7 @@ def team_in_charge_of_illegal_dumping(data):
 
     return reply
 
+
 #Characteristics of illegal dumping function
 def Characteristics_of_illegal_dumping(data):
     reply = {}
