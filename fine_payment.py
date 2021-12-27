@@ -21,8 +21,8 @@ default_app = firebase_admin.initialize_app(cred_obj, {
 def how_to_pay_fine(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
     ######SQL######
+    #conn = database.create_connection()
     #msgs.append({"text": {"text":["You can pay using the following option : "]}})
     #cur = conn.cursor()
     #cur.execute("SELECT response_1,response_2,response_3,response_4 FROM question where question_id = 1")
@@ -33,8 +33,6 @@ def how_to_pay_fine(data):
 
     ######Firebase######
     ref = db.reference("/Questions/Qn1/")
-
-
     rows = ref.get()
     for key, val in rows.items():
              msgs.append({"text": {"text":[val]}})
@@ -55,15 +53,21 @@ def how_to_pay_fine(data):
 def how_to_appeal(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
+    ######SQL######
+    #conn = database.create_connection()
+    #cur = conn.cursor()
+    #msgs.append({"text": {"text":["How to appeal ? Check the following scenario : "]}})
+    #cur.execute("SELECT response_1 FROM question where question_id = 2")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #      for response in row:
+    #               msgs.append({"text": {"text":[response]}})
 
-    cur = conn.cursor()
-    msgs.append({"text": {"text":["How to appeal ? Check the following scenario : "]}})
-    cur.execute("SELECT response_1 FROM question where question_id = 2")
-    rows = cur.fetchall()
-    for row in rows:
-          for response in row:
-                   msgs.append({"text": {"text":[response]}})
+    ######Firebase######
+    ref = db.reference("/Questions/Qn2/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}})
        
     msgs.append( {
         "quickReplies": {
@@ -83,15 +87,23 @@ def how_to_appeal(data):
 def missed_court_date(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    cur = conn.cursor()
-    msgs.append({"text": {"text":["Missed your court date ? Check the following scenario : "]}})
-    cur.execute("SELECT response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 3")
-    rows = cur.fetchall()
-    for row in rows:
-          for response in row:
-               msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #cur = conn.cursor()
+    #msgs.append({"text": {"text":["Missed your court date ? Check the following scenario : "]}})
+    #cur.execute("SELECT response_1,response_2,response_3,response_4,response_5 FROM question where question_id = 3")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #      for response in row:
+    #           msgs.append({"text": {"text":[response]}})
+
+    ######Firebase######
+    ref = db.reference("/Questions/Qn3/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}})
+       
                                  
     msgs.append( {
         "quickReplies": {
@@ -110,17 +122,23 @@ def missed_court_date(data):
 def court_attendance_status(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    cur = conn.cursor()
-    msgs.append({"text": {"text":["Court attendance required after fine payment ? Check the following scenario : "]}})
-    cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 4")
-    rows = cur.fetchall()
-    for row in rows:
-            for response in row:                  
-                   msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #cur = conn.cursor()
+    #msgs.append({"text": {"text":["Court attendance required after fine payment ? Check the following scenario : "]}})
+    #cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 4")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #        for response in row:                  
+    #               msgs.append({"text": {"text":[response]}})
     
-       
+     ######Firebase######
+    ref = db.reference("/Questions/Qn4/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
+    
     msgs.append( {
         "quickReplies": {
           "title": "Do you need anymore enquires ? 😊",
