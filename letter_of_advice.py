@@ -5,6 +5,7 @@ from google.cloud import dialogflow
 import requests
 import json
 import mysql.connector
+from firebase_admin import db
 
 #Import from other module
 import database
@@ -13,15 +14,22 @@ import database
 def What_to_do_for_noncompoundable_26N_LOA(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["What to do for non-compoundable 26N LOA? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2 FROM question where question_id = 12")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["What to do for non-compoundable 26N LOA? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2 FROM question where question_id = 12")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+     ######Firebase######
+    ref = db.reference("/Questions/Qn12/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
 
        
     msgs.append( {
@@ -42,16 +50,22 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
 def What_to_bring_for_WOA_execution(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["What to bring for WOA execution ? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1 FROM question where question_id = 13")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["What to bring for WOA execution ? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1 FROM question where question_id = 13")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
 
+     ######Firebase######
+    ref = db.reference("/Questions/Qn13/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
        
     msgs.append( {
         "quickReplies": {

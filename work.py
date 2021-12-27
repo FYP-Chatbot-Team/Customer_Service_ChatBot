@@ -5,6 +5,7 @@ from google.cloud import dialogflow
 import requests
 import json
 import mysql.connector
+from firebase_admin import db
 
 #Import from other module
 import database
@@ -13,15 +14,22 @@ import database
 def Nonurgent_SFA_cases(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["How to handle non-urgent SFA cases? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1 FROM question where question_id = 14")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+     ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["How to handle non-urgent SFA cases? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1 FROM question where question_id = 14")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+     ######Firebase######
+    ref = db.reference("/Questions/Qn14/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
 
        
     msgs.append( {
@@ -42,15 +50,22 @@ def Nonurgent_SFA_cases(data):
 def How_to_stop_SFA_rejecting_my_cases(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["How to ensure SFA accepts my case? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 15")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+    ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["How to ensure SFA accepts my case? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2,response_3 FROM question where question_id = 15")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
+
+     ######Firebase######
+    ref = db.reference("/Questions/Qn15/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
     
     msgs.append( {
         "quickReplies": {
@@ -70,16 +85,22 @@ def How_to_stop_SFA_rejecting_my_cases(data):
 def SFA_in_charge_of(data):
     reply = {}
     msgs = []
-    conn = database.create_connection()
 
-    msgs.append({"text": {"text":["What is SFA in charge of? : "]}})
-    cur = conn.cursor()
-    cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6 FROM question where question_id = 16")
-    rows = cur.fetchall()
-    for row in rows:
-         for response in row:
-              msgs.append({"text": {"text":[response]}})
+     ######SQL######
+    #conn = database.create_connection()
+    #msgs.append({"text": {"text":["What is SFA in charge of? : "]}})
+    #cur = conn.cursor()
+    #cur.execute("SELECT response_1,response_2,response_3,response_4,response_5,response_6 FROM question where question_id = 16")
+    #rows = cur.fetchall()
+    #for row in rows:
+    #     for response in row:
+    #          msgs.append({"text": {"text":[response]}})
 
+    ######Firebase######
+    ref = db.reference("/Questions/Qn16/")
+    rows = ref.get()
+    for key, val in rows.items():
+             msgs.append({"text": {"text":[val]}}) 
        
     msgs.append( {
         "quickReplies": {
