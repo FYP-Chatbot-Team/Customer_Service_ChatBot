@@ -5,16 +5,11 @@ from google.cloud import dialogflow
 import requests
 import json
 import mysql.connector
-import firebase_admin
 from firebase_admin import db
 
 #Import from other module
 import database
 
-#Connect to firebase database
-cred_obj = firebase_admin.credentials.Certificate('nea-database-b96f8-firebase-adminsdk-mo1sn-a344a5de3b.json')
-default_app = firebase_admin.initialize_app(cred_obj, {
-'databaseURL':'https://nea-database-b96f8-default-rtdb.asia-southeast1.firebasedatabase.app/'})
 
 
 #What information for illegal dumping function

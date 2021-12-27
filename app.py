@@ -5,6 +5,7 @@ from google.cloud import dialogflow
 import requests
 import json
 import mysql.connector
+import firebase_admin
 
 
 #Import from other module
@@ -14,6 +15,12 @@ import letter_of_reminder
 import letter_of_advice
 import work
 import Rating
+
+
+#Connect to firebase database
+cred_obj = firebase_admin.credentials.Certificate('nea-database-b96f8-firebase-adminsdk-mo1sn-a344a5de3b.json')
+default_app = firebase_admin.initialize_app(cred_obj, {
+'databaseURL':'https://nea-database-b96f8-default-rtdb.asia-southeast1.firebasedatabase.app/'})
 
 #Import from other module for log in system
 import user
