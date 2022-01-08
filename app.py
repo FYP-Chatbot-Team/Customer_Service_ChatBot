@@ -96,7 +96,7 @@ def graph():
 
     #####Firebase#######
     ref = db.reference("/Customer_Rating")
-    rows = ref.order_by_child("Rating").get()
+    rows = ref.order_by_child("C_Rating").get()
 
     for key, val in rows.items():
               if(val==1):
