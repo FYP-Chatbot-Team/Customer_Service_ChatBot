@@ -48,11 +48,11 @@
             <th>Comment</th>
             <th>Rating</th>
         </tr>
-        {% for r in comment %}
+        {% for key, val in rows.items(): %}
         <tr>
-            <td>{{ r[0] }}</td>
-            <td>{{ r[1] }}</td>
-            <td>{{ r[2] }}</td>
+            {% for i in val: %}
+            <td>{{ i }}</td>
+            {% endfor %}
         </tr>
         {% endfor %}
     </table>

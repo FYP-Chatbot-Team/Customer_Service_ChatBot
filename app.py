@@ -129,12 +129,15 @@ def comment():
     if not g.user:
         return redirect(url_for('login'))
     
-    conn = database.create_connection()
-    cur = conn.cursor()
+    ##SQL##
+    #conn = database.create_connection()
+    #cur = conn.cursor()
+    #cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
+    #comment = cur.fetchall()
 
-    cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
-    comment = cur.fetchall()
-
+    ##Firebase##
+    ref = db.reference("/Customer_Rating")
+    comment = ref.get()
 
     return render_template('comment.html', comment = comment )
 
