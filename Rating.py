@@ -33,9 +33,9 @@ def rating_function(data):
     ######Firebase######
     ref = db.reference("/Customer_Rating")
     ref.push().set({       
-        "Name": name,
-        "Comment": comment,
-        "Rating": rating
+        "A_Name": name,
+        "B_Comment": comment,
+        "C_Rating": rating
         }      
         )
 
