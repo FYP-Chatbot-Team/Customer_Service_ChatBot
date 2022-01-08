@@ -99,8 +99,7 @@ def graph():
     rows = ref.get()
 
     for key, val in rows.items():
-        for key2, i in rows.items():
-            print(key2)
+        for key2, i in val.items():
             if(key2 == "C_Rating"):
               if(i==1):
                   star1+=1
