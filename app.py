@@ -6,7 +6,7 @@ import requests
 import json
 import mysql.connector
 import firebase_admin
-
+from firebase_admin import db
 
 #Import from other module
 import fine_payment
@@ -79,8 +79,7 @@ def graph():
     if not g.user:
         return redirect(url_for('login'))
 
-    conn = database.create_connection()
-    cur = conn.cursor()
+    
 
     #Rating Graph
     star1 = 0
@@ -88,16 +87,25 @@ def graph():
     star3 = 0
     star4 = 0
     star5 = 0
-    cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
-    rows = cur.fetchall()
-    for row in rows:
-              if(row[2]==1):
+
+    #####SQL###
+    #conn = database.create_connection()
+    #cur = conn.cursor()
+    #cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
+    #rows = cur.fetchall()
+
+    #####Firebase#######
+    ref = db.reference("/Customer_Rating")
+    rows = ref.get()
+
+    for key, val in rows.items():
+              if(val[2]==1):
                   star1+=1
-              elif(row[2]==2):
+              elif(val[2]==2):
                   star2+=1
-              elif(row[2]==3):
+              elif(val[2]==3):
                   star3+=1
-              elif(row[2]==4):
+              elif(val[2]==4):
                   star4+=1
               else:
                   star5+=1
