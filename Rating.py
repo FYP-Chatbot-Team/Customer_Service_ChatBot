@@ -5,7 +5,7 @@ from google.cloud import dialogflow
 import requests
 import json
 import mysql.connector
-
+from firebase_admin import db
 #Import from other module
 import database
 
