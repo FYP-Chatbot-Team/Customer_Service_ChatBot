@@ -95,7 +95,7 @@ def graph():
     #rows = cur.fetchall()
 
     #####Firebase#######
-    ref = db.reference("/Customer_Rating")
+    ref = db.reference("/Customer_Rating/")
     rows = ref.order_by_child("C_Rating").get()
 
     for key, val in rows.items():
