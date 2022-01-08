@@ -50,7 +50,7 @@
         </tr>
         {% for key, val in comment.items(): %}
         <tr>
-            {% for i in val: %}
+            {% for key , i in val: %}
             <td>{{ i }}</td>
             {% endfor %}
         </tr>
