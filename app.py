@@ -96,16 +96,16 @@ def graph():
 
     #####Firebase#######
     ref = db.reference("/Customer_Rating")
-    rows = ref.get()
+    rows = ref.order_by_child("Rating").get()
 
     for key, val in rows.items():
-              if(val[2]==1):
+              if(val==1):
                   star1+=1
-              elif(val[2]==2):
+              elif(val==2):
                   star2+=1
-              elif(val[2]==3):
+              elif(val==3):
                   star3+=1
-              elif(val[2]==4):
+              elif(val==4):
                   star4+=1
               else:
                   star5+=1
