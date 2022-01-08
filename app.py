@@ -100,6 +100,7 @@ def graph():
 
     for key, val in rows.items():
         for key2, i in rows.items():
+            print(key2)
             if(key2 == "C_Rating"):
               if(i==1):
                   star1+=1
