@@ -99,13 +99,13 @@ def graph():
     rows = ref.order_by_child("C_Rating").get()
 
     for key, val in rows.items():
-              if(i[1][2]==1):
+              if(val[1][2]==1):
                   star1+=1
-              elif(i[1][2]==2):
+              elif(val[1][2]==2):
                   star2+=1
-              elif(i[1][2]==3):
+              elif(val[1][2]==3):
                   star3+=1
-              elif(i[1][2]==4):
+              elif(val[1][2]==4):
                   star4+=1
               else:
                   star5+=1
