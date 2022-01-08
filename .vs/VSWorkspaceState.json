@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\templates"
   ],
-  "SelectedNode": "\\Rating.py",
+  "SelectedNode": "\\app.py",
   "PreviewInSolutionExplorer": false
 }
