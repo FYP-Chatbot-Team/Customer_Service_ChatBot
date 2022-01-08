@@ -32,7 +32,9 @@ def info_for_illegal_dumping(data):
     ref = db.reference("/Questions/Qn5/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -67,7 +69,9 @@ def dumping_vs_waste(data):
     ref = db.reference("/Questions/Qn6/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -101,7 +105,9 @@ def team_in_charge_of_bulky_waste(data):
     ref = db.reference("/Questions/Qn7/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
 
 
        
@@ -173,7 +179,9 @@ def Characteristics_of_illegal_dumping(data):
     ref = db.reference("/Questions/Qn9/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}})
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {

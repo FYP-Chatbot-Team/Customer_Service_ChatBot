@@ -30,7 +30,9 @@ def Advise_for_compoundable_26N_LOR(data):
     ref = db.reference("/Questions/Qn10/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
        
     msgs.append( {
         "quickReplies": {
@@ -64,7 +66,9 @@ def Need_go_to_court_for_settled_C14_fine(data):
     ref = db.reference("/Questions/Qn11/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}})   
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
     
     msgs.append( {
         "quickReplies": {

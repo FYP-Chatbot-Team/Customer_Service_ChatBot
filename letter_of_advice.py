@@ -29,7 +29,9 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
     ref = db.reference("/Questions/Qn12/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -65,7 +67,9 @@ def What_to_bring_for_WOA_execution(data):
     ref = db.reference("/Questions/Qn13/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
        
     msgs.append( {
         "quickReplies": {

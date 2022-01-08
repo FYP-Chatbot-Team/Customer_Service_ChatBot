@@ -29,7 +29,9 @@ def Nonurgent_SFA_cases(data):
     ref = db.reference("/Questions/Qn14/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -65,7 +67,9 @@ def How_to_stop_SFA_rejecting_my_cases(data):
     ref = db.reference("/Questions/Qn15/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
     
     msgs.append( {
         "quickReplies": {
@@ -100,7 +104,9 @@ def SFA_in_charge_of(data):
     ref = db.reference("/Questions/Qn16/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"text": {"text":[val]}}) 
+        ar = val.split(" | ")
+        for i in ar:
+            msgs.append({"text": {"text":[i]}})
        
     msgs.append( {
         "quickReplies": {
