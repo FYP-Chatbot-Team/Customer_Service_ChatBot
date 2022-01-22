@@ -13,15 +13,53 @@ responses:
   utter_greet:
   - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_How_To_Pay_Fine:
+  - text: "AXS Stations, E-Station, M-Station"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_How To_Appeal:
+  - text: "When we receive calls from MOP requesting for an appeal form, CC will inform MOP to download the form from our NEA website. MOP will have to complete the form and send it in to us via O.F.F or post. All appeals will take 14 working days to process. "
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_Missed_Court_Date:
+  - text: "Compoundable 26N:  Scenario 1: If the offender called in after the cut off payment. Advise offender to attend court at 6pm. Scenario 2: Offender missed to attend court. Advise offender to walk in to Crime Registry in State Courts to enquire. Scenario 3: Offender forgot to attend court but intended on attending court. Advise offender to walk in to Crime Registry in State Courts to enquire. Compoundable C14 and Other Courts:  Scenario 1: If the offender called in after the cut off payment. Advise offender to attend court at 9:30am. Scenario 2: Offender missed to attend court. Advise offender that Warrant of Arrest will be issued anytime "
+
+  utter_Info_for_illegal_dumping:
+  - text: Date and time of occurrence/ sighting. Feedback giver’s particulars (name, contact details). Location of incident (address, nearest landmark) Type of waste (wood waste, renovation waste, construction debris etc). Estimated amount of waste (how many 660L bulk bins?). Vehicle number and description of vehicles involved in the dumping. Did the feedback giver witness the dumping in action? Is the dumping still in progress at the time of feedback? 
+
+  utter_Court_Attendance_Status:
+  - text: "Compoundable 26N: No need to attend court. Compoundable C14 and Other Courts: If Warrant of Arrest has not been issued, court attendance is not required. If Warrant of Arrest has been issued, CCO to check with LD if Court attendance is required.  "
+
+  utter_Illegal_dumping_vs_bulky_waste:
+  - text: "Illegal Dumping: Loose waste disposed from vehicle where volume more than 2 x 660L bulk bins or ½ lorry load. Usually dumped at remote areas or outskirts of city/island. Requires vehicle to transport waste to dump site. Bulky Waste: Large items normally found in homes/trade premises e.g. furniture, electrical appliances, fixtures etc. Usually placed along pavement/side table of residential areas or trade premises. Item retaining most of assembled/end-product appearance "
+
+  utter_Team_in_charge_of_bulky_waste:
+  - text: "EPHO-RO-Sanitation <XXX> Team "
+
+  utter_Team_in_charge_of_illegal_dumping:
+  - text: "WRMD"
+
+  utter_Characteristics_of_illegal_dumping:
+  - text: "Illegal dumping occurs when large scale of waste is dumped from (presumably) a vehicle at a public place, where, A public place is where the members of public have free access to the place. A construction site is not considered a public place. Illegal dumping does not normally occur in urbanised areas/residential areas/populated areas/high traffic areas/immediate vicinities of trade, factory and industrial premises. Large scale equate to volume of more than 2 x 660L bulk bins. "
+
+  utter_Advise_for_compoundable_26N_LOR:
+  - text: "Advise the customer to make fine payment. Failure to make fine payment may result to issuance of Warrant of Arrest  "
+
+  utter_need_go_court_for_setlled_C14_fine: 
+  - text: "Court attendance will not be required  "
+
+  utter_what_to_do_for_non-compoundable_26N_LOA:
+  - text: "Advise the following to the offender: Pay the compoundable amount ONLY at CSC Counter and no need to execute Warrant of Arrest. To keep the receipt as the case may take 2-3 months to close "
+
+  utter_What_to_bring_for_WOA_execution:
+  - text: "1 person (Singapore Citizen/Permanent Resident) above 21 years old to stand as a bailor pending court trail "
+
+  utter_Non-urgent_SFA_cases:
+  - text: "CC to log and route the case via OneService (please check the reminder above) "
+
+  utter_How_to_stop_SFA_rejecting_my_cases:
+  - text: "In Case Description, CC to ensure the following keywords are used to prevent case rejection from SFA: Food hygiene, Food preparation, Food safety management. (E.g. Feedback on birds inside the food stall which caused food hygiene issue) "
+
+  utter_SFA_in_charge_of:
+  - text: "Food Hygiene, Food Safety, Food Preparation, Illegal Hawking, Food Shop/Food Stall Licenses,Any other food related issues "
 
   utter_goodbye:
   - text: "Bye"

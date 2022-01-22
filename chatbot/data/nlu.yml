@@ -369,3 +369,17 @@ nlu:
     -Is SFA in charge of anything? 
     -Does SFA have control over anything? 
     -SFA is overseeing what? 
+
+- intent: greet
+  examples: |
+    -Hello
+    -Yo
+    -Hi
+    -What's up
+    -Hey
+    -Good Afternoon
+    -Good Morning
+    -Salutations
+    -Greetings
+    -Sup
+
