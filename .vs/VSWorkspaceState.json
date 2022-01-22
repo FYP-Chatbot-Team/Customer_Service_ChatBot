@@ -1,8 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\data"
+    ""
   ],
-  "SelectedNode": "\\data\\rules.yml",
+  "SelectedNode": "\\start_services.sh",
   "PreviewInSolutionExplorer": false
 }
