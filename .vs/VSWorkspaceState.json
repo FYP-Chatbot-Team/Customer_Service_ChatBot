@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\chatbot"
+    "\\data"
   ],
-  "SelectedNode": "\\chatbot\\credentials.yml",
+  "SelectedNode": "\\data\\rules.yml",
   "PreviewInSolutionExplorer": false
 }

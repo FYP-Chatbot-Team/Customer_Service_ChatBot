@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say Hello
+  steps:
+  - intent: greet
+  - action: utter_greet
