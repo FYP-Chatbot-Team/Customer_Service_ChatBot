@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\chatbot",
+    "\\env\\Scripts\\__pycache__"
   ],
-  "SelectedNode": "\\app.py",
+  "SelectedNode": "\\Procfile",
   "PreviewInSolutionExplorer": false
 }
