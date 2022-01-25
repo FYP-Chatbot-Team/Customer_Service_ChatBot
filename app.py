@@ -70,12 +70,19 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
-        user = [x for x in users if x.username == username][0]
-        if user and user.password == password:
-            session['user_id'] = user.id
-            return redirect(url_for('graph'))
+        try:
+         user = [x for x in users if x.username == username][0]
+        except:
+           return redirect(url_for('login'))
+        else:
+            user = [x for x in users if x.username == username][0]
+            if user and user.password == password:
+                session['user_id'] = user.id
+                return redirect(url_for('graph'))
 
-        return redirect(url_for('login'))
+            return redirect(url_for('login'))
+
+       
 
     return render_template('login.html')
 
