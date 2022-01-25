@@ -28,17 +28,15 @@ import database
 
 #Set Up for Log In
 users = []
-ref = db.reference("/Questions/Access/")
+ref = db.reference("/Access/")
 rows = ref.get()
 i = 0;
 for key, val in rows.items():
     i+=1
-    if(key =="Password"):
-        password = val
-        
+    if(key == "Password"):
+        password = val        
     else:
-        username = val
-     
+        username = val    
     if(i == 2):
          users.append(user.User(id=1, username=username, password=password))
          
