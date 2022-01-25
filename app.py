@@ -28,19 +28,20 @@ import database
 
 #Set Up for Log In
 users = []
-#ref = db.reference("/Access/")
-#rows = ref.get()
-#i = 0;
-#for key, val in rows.items():
-#    i+=1
-#    if(key == "Password"):
-#        password = val        
-#    else:
-#        username = val    
-#    if(i == 2):
-#         users.append(user.User(id=1, username=username, password=password))
+ref = db.reference("/Access/")
+rows = ref.get()
+i = 0
+id = 0
+for key, val in rows.items():
+    i+=1
+    if(key == "Password"):
+       password = val        
+    else:
+        username = val    
+    if(i == 2):
+        id+=1
+        users.append(user.User(id=id, username=username, password=password))
          
-users.append(user.User(id=1, username="admin", password="password"))  
 
 app = Flask(__name__)
 app.secret_key = 'FYPNEACHATBOTISTHEBEST12345'
