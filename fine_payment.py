@@ -31,7 +31,7 @@ def how_to_pay_fine(data):
     for key, val in rows.items():
         if(key == "Count"):
             count = int(val) + 1
-            ref.child("Fine Payment").update({"Count":count})
+            ref.child(key).update(count)
 
     ######Firebase######
     ref = db.reference("/Questions/Qn1/")
@@ -74,7 +74,7 @@ def how_to_appeal(data):
     for key, val in rows.items():
         if(key == "Count"):
             count = int(val) + 1
-            ref.child("Fine Payment").update({"Count":count})
+            ref.child(key).update(count)
 
     ######Firebase######
     ref = db.reference("/Questions/Qn2/")
@@ -119,7 +119,7 @@ def missed_court_date(data):
     for key, val in rows.items():
         if(key == "Count"):
             count = int(val) + 1
-            ref.child("Fine Payment").update({"Count":count})
+            ref.child(key).update(count)
 
     ######Firebase######
     ref = db.reference("/Questions/Qn3/")
@@ -164,7 +164,7 @@ def court_attendance_status(data):
     for key, val in rows.items():
         if(key == "Count"):
             count = int(val) + 1
-            ref.child("Fine Payment").update({"Count":count})
+            ref.child(key).update(count)
     
      ######Firebase######
     ref = db.reference("/Questions/Qn4/")
