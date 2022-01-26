@@ -26,11 +26,12 @@ def how_to_pay_fine(data):
     #          msgs.append({"text": {"text":[response]}})
 
     ######Firebase Update Topic Count######
-    ref = db.reference("/Topics/Fine Payment/")
+    ref = db.reference("/Topics/")
     rows = ref.get()
     for key, val in rows.items():
-        if(key == "Count"):
-            count = int(val) + 1
+        if(key == "Fine Payment"):
+            count_firebase = value["Count"]
+            count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
     ######Firebase######
@@ -69,11 +70,12 @@ def how_to_appeal(data):
     #               msgs.append({"text": {"text":[response]}})
 
      ######Firebase Update Topic Count######
-    ref = db.reference("/Topics/Fine Payment/")
+    ref = db.reference("/Topics/")
     rows = ref.get()
     for key, val in rows.items():
-        if(key == "Count"):
-            count = int(val) + 1
+        if(key == "Fine Payment"):
+            count_firebase = value["Count"]
+            count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
     ######Firebase######
@@ -114,11 +116,12 @@ def missed_court_date(data):
     #           msgs.append({"text": {"text":[response]}})
 
      ######Firebase Update Topic Count######
-    ref = db.reference("/Topics/Fine Payment/")
+    ref = db.reference("/Topics/")
     rows = ref.get()
     for key, val in rows.items():
-        if(key == "Count"):
-            count = int(val) + 1
+        if(key == "Fine Payment"):
+            count_firebase = value["Count"]
+            count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
     ######Firebase######
@@ -158,12 +161,13 @@ def court_attendance_status(data):
     #        for response in row:                  
     #               msgs.append({"text": {"text":[response]}})
 
-     ######Firebase Update Topic Count######
-    ref = db.reference("/Topics/Fine Payment/")
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
     rows = ref.get()
     for key, val in rows.items():
-        if(key == "Count"):
-            count = int(val) + 1
+        if(key == "Fine Payment"):
+            count_firebase = value["Count"]
+            count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
     
      ######Firebase######
