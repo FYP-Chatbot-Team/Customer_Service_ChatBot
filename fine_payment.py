@@ -30,7 +30,7 @@ def how_to_pay_fine(data):
     rows = ref.get()
     for key, val in rows.items():
         if(key == "Fine Payment"):
-            count_firebase = value["Count"]
+            count_firebase = val["Count"]
             count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
@@ -74,7 +74,7 @@ def how_to_appeal(data):
     rows = ref.get()
     for key, val in rows.items():
         if(key == "Fine Payment"):
-            count_firebase = value["Count"]
+            count_firebase = val["Count"]
             count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
@@ -120,7 +120,7 @@ def missed_court_date(data):
     rows = ref.get()
     for key, val in rows.items():
         if(key == "Fine Payment"):
-            count_firebase = value["Count"]
+            count_firebase = val["Count"]
             count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
@@ -166,7 +166,7 @@ def court_attendance_status(data):
     rows = ref.get()
     for key, val in rows.items():
         if(key == "Fine Payment"):
-            count_firebase = value["Count"]
+            count_firebase = val["Count"]
             count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
     
