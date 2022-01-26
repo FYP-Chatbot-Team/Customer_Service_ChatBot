@@ -25,6 +25,16 @@ def Nonurgent_SFA_cases(data):
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
 
+
+     ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Work Instructions for SFA"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
      ######Firebase######
     ref = db.reference("/Questions/Qn14/")
     rows = ref.get()
@@ -63,6 +73,15 @@ def How_to_stop_SFA_rejecting_my_cases(data):
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
 
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Work Instructions for SFA"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
      ######Firebase######
     ref = db.reference("/Questions/Qn15/")
     rows = ref.get()
@@ -99,6 +118,15 @@ def SFA_in_charge_of(data):
     #for row in rows:
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
+
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Work Instructions for SFA"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
 
     ######Firebase######
     ref = db.reference("/Questions/Qn16/")

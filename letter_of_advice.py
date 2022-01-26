@@ -25,6 +25,15 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
 
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Process for LOA"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
      ######Firebase######
     ref = db.reference("/Questions/Qn12/")
     rows = ref.get()
@@ -62,6 +71,15 @@ def What_to_bring_for_WOA_execution(data):
     #for row in rows:
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
+
+     ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Process for LOA"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
 
      ######Firebase######
     ref = db.reference("/Questions/Qn13/")

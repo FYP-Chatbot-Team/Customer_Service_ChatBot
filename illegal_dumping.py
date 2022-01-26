@@ -28,6 +28,15 @@ def info_for_illegal_dumping(data):
     #    for response in row:
     #          msgs.append({"text": {"text":[response]}})
 
+     ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Illegal Dumping"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
      ######Firebase######
     ref = db.reference("/Questions/Qn5/")
     rows = ref.get()
@@ -65,6 +74,15 @@ def dumping_vs_waste(data):
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
 
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Illegal Dumping"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
     ######Firebase######
     ref = db.reference("/Questions/Qn6/")
     rows = ref.get()
@@ -100,6 +118,15 @@ def team_in_charge_of_bulky_waste(data):
     #for row in rows:
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
+
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Illegal Dumping"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
 
       ######Firebase######
     ref = db.reference("/Questions/Qn7/")
@@ -140,6 +167,15 @@ def team_in_charge_of_illegal_dumping(data):
     #     for response in row:
     #          msgs.append({"image": {"imageUri":[response]}})
 
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Illegal Dumping"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
       ######Firebase######
     ref = db.reference("/Questions/Qn8/")
     rows = ref.get()
@@ -174,6 +210,15 @@ def Characteristics_of_illegal_dumping(data):
     #for row in rows:
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
+
+    ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Illegal Dumping"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
 
         ######Firebase######
     ref = db.reference("/Questions/Qn9/")

@@ -25,6 +25,15 @@ def Advise_for_compoundable_26N_LOR(data):
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
 
+     ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Process for LOR"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
+
 
     ######Firebase######
     ref = db.reference("/Questions/Qn10/")
@@ -61,6 +70,15 @@ def Need_go_to_court_for_settled_C14_fine(data):
     #for row in rows:
     #     for response in row:
     #          msgs.append({"text": {"text":[response]}})
+
+     ######Firebase Update Topic Count######
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Process for LOR"):
+            count_firebase = val["Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Count": count})
 
      ######Firebase######
     ref = db.reference("/Questions/Qn11/")
