@@ -93,18 +93,18 @@
     var Barchart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: {{ labels | safe }},
+            labels: {{ labels1 | safe }},
         datasets: [{
                 label: "Frequency:",
                 backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                data: {{ values | safe }}
+                data: {{ values1 | safe }}
             }]
             },
         options: {
             legend: { display: false },
             title: {
                 display: true,
-                text: "Customer's Rating Graph"
+                text: "Frequency of Topic Graph"
             },
             scales: {
                 yAxes: [{

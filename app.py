@@ -115,7 +115,7 @@ def graph():
     #cur.execute("SELECT customer_name,comment,rating FROM customer_rating")
     #rows = cur.fetchall()
 
-    #####Firebase#######
+    #####Firebase for customer rating#######
     ref = db.reference("/Customer_Rating/")
     rows = ref.get()
 
@@ -144,7 +144,20 @@ def graph():
     labels = [row[0] for row in data]
     values = [row[1] for row in data]
 
-    return render_template('graph.html', labels=labels , values=values)
+    #####Firebase for customer rating#######
+    data = []
+    ref = db.reference("/Topics/")
+    rows = ref.get()
+    for key, val in rows.items():
+        id = key
+        for key2, i in val.items():
+            if(key2=="Count"):
+                count = i
+                data.append([id,count])
+
+    labels1 = [row[0] for row in data]
+    values1 = [row[1] for row in data]
+    return render_template('graph.html', labels=labels , values=values,labels1=labels1,values1=values1)
 
 
 #Comment Page
