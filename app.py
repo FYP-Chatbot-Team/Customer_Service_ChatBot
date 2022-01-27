@@ -183,7 +183,7 @@ def comment():
 #NEA Webpage for Chatbot
 @app.route('/webpage')
 def webpage():
-    return render_template(url_for('webpage.html'))
+    return render_template('webpage.html')
 
 
 ############Dialogflow##################
