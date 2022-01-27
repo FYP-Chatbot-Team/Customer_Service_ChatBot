@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEA Webpage</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="https://lh3.googleusercontent.com/IC0Oz7wNoPbeF9221xy7-nPfbYTfwQxPoH8n9Gce60sfY-VuVsvjOHwGwA80IeaCeJmzGDMJLBeefERb6jDYAdEo0V0PizKFq-BHDQJdlLOGdzQOccnwUA9G_6oOblwUTHGJyOYzxFkmffdk9OHBl2j3F63lx5U5tblmhBRpRZM2Fp4Ta_0su-0t1izNq42lHKy8vOFta9Z9AZV9ybzkvDQhp6NqXSTQHOO7He1yvs0ZUvv7xdEtRWRCCLiEXHpbD8I3nB4b_OyAe9IPija-xCXJz_v7Zw4OYaxk0-qU8Q4raXhBd_FTw1o7nNBfAWkrTn8MHSBH1koVEy9LuQv5Bgg5M8AOhJb4Qp-gPTPQhpqUdBhSXtrsqKg7sX0_MDEqFXAVGQvmwpTPfxF3AKRqke37MGPajHkZYNj6WSIJNXK7aUqvs_M65JwwBIbBsqzJmWtXnOCCXri-J8hRZ3PJuLQvdp1csE_CPMjC1BblboPDcCJghDXOMod-39UJ3Hyu-aRlgyVvkC_-bh8CGbPWGaY0phjYmX0QwZcWCsqIo4u_dKxNgaPFe3Vq6yJOkhfz-xPortIbsVxm35tugEsA-zifu6_z4YBRdn8efvJaeRHGd9JnkFcJL63MLqQBjFZg71g26FNIjj08RyHxhbKrOIPldYMwK_5Dj_jsLUhRCd5HBAzBqF0pWLbuVsqTkHF-dlyPMbPfH99Uj-_JaqFpeQ=s225-no?authuser=2" width="100" height="100" />
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">NEA</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--Create the header tab-->>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index"
+                               style="font-weight: bold;">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy"
+                               style="font-weight: bold;">Who we are?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Programmes"
+                               style="font-weight: bold;">Programmes & Grants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Media"
+                               style="font-weight: bold;">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Resources"
+                               style="font-weight: bold;">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/E-service"
+                               style="font-weight: bold;">E-service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <!--Add image-->
+            <img src="https://lh3.googleusercontent.com/rrqwqBwSpunfn4dHTzH5wZcMjD-GZp0jUefZ0YzAx3o3v3EEQ9ZUYm6HW_g3xrAqaKKmTaxd0VwKe6EQZlpa9nBcSBv78CgxVJFP3YCQu55d-hdxtZAd7_NdPJsF8tYahaTEeGDyg0PrEzMuQeM08oEQOrPQXqT1fs4OY7wz552cy5ElnEHs3cQOufe83_6eZmV01JTVU0CjYbOlPa9qzTpisQe7LY-7p36rRCm_W-ZsOoCplq1p0hrgFVvkJzpm7Kl23aOC1NUTqPwwIpPGgTRX6ahdR7lL6TVyPQSmrapkPZ2ZpqdEljfyu2r-X-2DdYZUfh6C-Kmw15JNoO78QVgU5Ubtk2BCkjYi20qc64Al_On3UoiCWhbFgHbm3yQZF1vZLYp_uFW_ZG_bAg64wVHtXWQ84K7kdp-mjPTM0TpdiZlLY1C9Ikx9GyUQ5QJlVv3F5LKyK1Pm02urtzlRTuKpAncByIvxUdHBKUOVwqStEQaCv2xm08AUjxcgHVisIBI4GIzQSax_fu0ykjk8hDr18FkWQbF5lPGGLYE2-mQkA7UyhIiGPivZVibHobvC29ZZlX4ziQVsP5H9ngaCPMiIHWACU6pezVJlOAegJ7RNfUUFLy4VXTGJKciTlmzM9KnG-iUMrC5GL60Wvrs64ym3y73zuwxJBW1enH6KsesOnUiw_OAklWtriionn4R5G8hayZ52xi-GvRYh-ZVoNw=w561-h495-no?authuser=2" width="350" height="350" />
+            <img src="https://lh3.googleusercontent.com/t1JZt5BWJXaEyR56hHWegK-C_b6-HF2rJMx0bNtm1G6JMds7QaO2hqh4IwMSMFBDtu272fSPBQRkiPlezn8WPS3I2eO8L6TjPoqb0jarIzl1pDak0fuRNmIBxLwnr66CXt6nmd_aiVeq3oeov1XuqVcqBVcRcaASBlLY1mxdN-0fBJ7wuaF_IjkSqfbCJNBaY8u9pE2RCRXy7MaIpEx04DEUkFcFFy2tThEoungedP_-zVRjJCQMGCAXOxfuGKqwy1ToCXvGR31w6hynz2PmMa6fUXjxcop_Ag9hojZ1reAggqU5LaMuBqLf-vn5btxY9zO5SGnHUok_bxYAD5Dq0_LRGAzpx1-om7z8YZLdgIA3C6o-Rb21L7x-2cpObWbuY3lUFlF8YrLr7AMsF-xxZSXtZp6fWUHXc9poMJAKagiS_PDN8saAOE3Ew2T-IHQmkLHNof_8ta0j9MSKa61ZjImKaY3Taur94tzXwgQ0JQ40Svc6shFavLncevaZwnpMbDxRs76rAy3BbMVET5Ja_fEzphruR1RqWlkCFp-qZlvMhftmLaZ9RaE9QtVEMfPbgADEeScj4gsW_K9c2_fKD7kpu2i75YiYQtYXhI3Hts9z73y6YhjQ5TeyUtqe0ch73Fx6SXK3AFI_EfXZU0aQHD91loQd82x2uI1zQVRWlntRxk0aYmA7RhDb7nlNmku5oFl-XI6u5AeuRJURvdfoYA=w559-h498-no?authuser=2" width="350" height="350" />
+            <img src="https://lh3.googleusercontent.com/NPfbRRSaj6pAjKajSKdURlAJQechNdYcAI4I6bTCDuhTdpPth6Eh_IPK7Md57nhu64v7c_kmydhJxxjaLQbjRmjem23kjNuMFgSaFwaFVdCpaUeWtAhdnjaVxbaaFCQuQWfmhOiQQ7N1QzUQq3iGsV4_lVnkKW0YhzNlHG_hXpr03uk190W5qEN71Br5jcdDFJ8qFGe2g-oswrjMtkz7n2SV478yyyJBAvYLv7oBvqnjFspIK0iBEZbatezX9YgdQreSW4vEWs5elcc-4klSibIQlS0SDNmwkbGN_hwl36XE3H5hc3sh9rd4eJUEHh0oC6FN2rkISvOq6xvTAAfeq0NOM1x_OhreyGLPGyDzMa6WnLyvQc7tsdBo_qzf557grcY1gIhpbYiTaGs6M-Axx8I3QdExB6XJ2nSmmEYWQT7HK3f7sPEIEQlYH1r9BZj0O-PLoi6ulGzkzx_7tXfeGKgZFUNO5BilSnopisme7gaoG4HgRFTgRzcrdBcOgTJGmVE61cAnJQJEGL0qt6Oju1gvf9KlJfduucUjm4CmVno2swIQcbJbWakRsWIWImxYPdCqvX-IlsnabcOocz4e82yEWhVVsBIh8DCTfE3owBycrcKo7g2OUlYit9n5MaEObLtkBI7M5lhn0x8w44sZefw6DcNCDCSh3vm0WfccjqH-X3qpzQPGcSSmArWUpshVXHdcHKZhFWgd6zQEVJM_Tg=w558-h498-no?authuser=2" width="350" height="350" />
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - FYP - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

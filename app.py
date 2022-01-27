@@ -94,6 +94,7 @@ def logout():
     return redirect(url_for('login'))
 
 
+
 #Graph Page
 @app.route('/graph')
 def graph():
@@ -177,6 +178,13 @@ def comment():
     comment = ref.get()
 
     return render_template('comment.html', comment = comment )
+
+
+#NEA Webpage for Chatbot
+@app.route('/webpage')
+def webpage():
+    return render_template(url_for('webpage'))
+
 
 ############Dialogflow##################
 @app.route('/webhook', methods=['POST'])
