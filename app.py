@@ -158,7 +158,20 @@ def graph():
 
     labels1 = [row[0] for row in data]
     values1 = [row[1] for row in data]
-    return render_template('graph.html', labels=labels , values=values,labels1=labels1,values1=values1)
+
+    #####Firebase for top 5 Question from chatbot#######
+    data = []
+    ref = db.reference("/Questions/")
+    rows = ref.order_by_child("Q_count").limit_to_first(5).get()
+    for key, val in rows.items():
+        id = val["Name"]
+        count = val["Q_Count"]
+        data.append([id,count])
+
+    labels2 = [row[0] for row in data]
+    values2 = [row[1] for row in data]
+
+    return render_template('graph.html', labels=labels , values=values,labels1=labels1,values1=values1,labels2=labels2,values2=values2)
 
 
 #Comment Page
