@@ -192,11 +192,24 @@ def comment():
 
     return render_template('comment.html', comment = comment )
 
+#Question Page
+@app.route('/question')
+def question():
+    if not g.user:
+        return redirect(url_for('login'))
+
+    ##Firebase##
+    ref = db.reference("/Questions/")
+    question = ref.get()
+
+    return render_template('question.html', question = question )
 
 #NEA Webpage for Chatbot
 @app.route('/webpage')
 def webpage():
     return render_template('webpage.html')
+
+
 
 
 ############Dialogflow##################
