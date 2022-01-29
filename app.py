@@ -162,9 +162,9 @@ def graph():
     #####Firebase for top 5 Question from chatbot#######
     data = []
     ref = db.reference("/Questions/")
-    rows = ref.order_by_child("Q_Count").limit_to_first(5).get()
+    rows = ref.order_by_child("Q_Count").limit_to_last(5).get()
     for key, val in rows.items():
-        id = val["Name"]
+        id = key
         count = val["Q_Count"]
         data.append([id,count])
 
