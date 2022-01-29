@@ -36,12 +36,18 @@ def Advise_for_compoundable_26N_LOR(data):
 
 
     ######Firebase######
-    ref = db.reference("/Questions/Qn10/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn10"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
        
     msgs.append( {
         "quickReplies": {
@@ -81,12 +87,18 @@ def Need_go_to_court_for_settled_C14_fine(data):
             ref.child(key).update({"Count": count})
 
      ######Firebase######
-    ref = db.reference("/Questions/Qn11/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn11"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
     
     msgs.append( {
         "quickReplies": {

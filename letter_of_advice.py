@@ -35,12 +35,18 @@ def What_to_do_for_noncompoundable_26N_LOA(data):
             ref.child(key).update({"Count": count})
 
      ######Firebase######
-    ref = db.reference("/Questions/Qn12/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn12"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -82,12 +88,18 @@ def What_to_bring_for_WOA_execution(data):
             ref.child(key).update({"Count": count})
 
      ######Firebase######
-    ref = db.reference("/Questions/Qn13/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn13"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
        
     msgs.append( {
         "quickReplies": {

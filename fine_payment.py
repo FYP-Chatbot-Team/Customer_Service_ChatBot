@@ -86,12 +86,18 @@ def how_to_appeal(data):
             ref.child(key).update({"Count": count})
 
     ######Firebase######
-    ref = db.reference("/Questions/Qn2/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn2"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
        
     msgs.append( {
         "quickReplies": {
@@ -132,12 +138,18 @@ def missed_court_date(data):
             ref.child(key).update({"Count": count})
 
     ######Firebase######
-    ref = db.reference("/Questions/Qn3/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn3"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
        
                                  
     msgs.append( {
@@ -178,12 +190,18 @@ def court_attendance_status(data):
             ref.child(key).update({"Count": count})
     
      ######Firebase######
-    ref = db.reference("/Questions/Qn4/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn4"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
     
     msgs.append( {
         "quickReplies": {

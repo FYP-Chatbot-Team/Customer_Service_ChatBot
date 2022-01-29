@@ -38,12 +38,18 @@ def info_for_illegal_dumping(data):
             ref.child(key).update({"Count": count})
 
      ######Firebase######
-    ref = db.reference("/Questions/Qn5/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn5"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -84,12 +90,18 @@ def dumping_vs_waste(data):
             ref.child(key).update({"Count": count})
 
     ######Firebase######
-    ref = db.reference("/Questions/Qn6/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn6"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
@@ -129,12 +141,18 @@ def team_in_charge_of_bulky_waste(data):
             ref.child(key).update({"Count": count})
 
       ######Firebase######
-    ref = db.reference("/Questions/Qn7/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn7"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
 
 
        
@@ -180,7 +198,23 @@ def team_in_charge_of_illegal_dumping(data):
     ref = db.reference("/Questions/Qn8/")
     rows = ref.get()
     for key, val in rows.items():
-             msgs.append({"image": {"imageUri":[val]}}) 
+             
+
+    ref = db.reference("/Questions/")
+    rows = ref.get()
+    for key, val in rows.items():
+        if(key == "Qn8"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            i = 1
+            while i <= 5:
+               response = "Response"+str(i)
+               url = val[response]
+               msgs.append({"image": {"imageUri":[url]}}) 
+               i+=1
        
     msgs.append( {
         "quickReplies": {
@@ -221,12 +255,18 @@ def Characteristics_of_illegal_dumping(data):
             ref.child(key).update({"Count": count})
 
         ######Firebase######
-    ref = db.reference("/Questions/Qn9/")
+    ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
-        ar = val.split(" | ")
-        for i in ar:
-            msgs.append({"text": {"text":[i]}})
+        if(key == "Qn9"):
+            count_firebase = val["Q_Count"]
+            count = int(count_firebase) + 1
+            ref.child(key).update({"Q_Count": count})
+            question = val["Name"]
+            msgs.append({"text": {"text":[question]}})
+            ar = val["Response1"].split(" | ")
+            for i in ar:
+               msgs.append({"text": {"text":[i]}})
 
        
     msgs.append( {
