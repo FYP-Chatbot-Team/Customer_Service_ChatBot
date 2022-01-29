@@ -65,14 +65,12 @@
         <table id="comTable" class="table table-bordered table-condensed table-hover table-striped">
             <thead class="thead-dark">
                 <tr>
-                    <th>#</th>
                     <th>Question Name</th>
                     <th>Count</th>
                 </tr>
             </thead>
             {% for key, val in question.items(): %}
             <tr>
-                <td>{{ key }}</td>
                 <td>{{ val["Name"] }}</td>
                 <td>{{ val["Q_Count"] }}</td>
             </tr>
