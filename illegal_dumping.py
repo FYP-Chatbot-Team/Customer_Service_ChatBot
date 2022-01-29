@@ -194,12 +194,7 @@ def team_in_charge_of_illegal_dumping(data):
             count = int(count_firebase) + 1
             ref.child(key).update({"Count": count})
 
-      ######Firebase######
-    ref = db.reference("/Questions/Qn8/")
-    rows = ref.get()
-    for key, val in rows.items():
-             
-
+      ######Firebase######     
     ref = db.reference("/Questions/")
     rows = ref.get()
     for key, val in rows.items():
@@ -215,6 +210,8 @@ def team_in_charge_of_illegal_dumping(data):
                url = val[response]
                msgs.append({"image": {"imageUri":[url]}}) 
                i+=1
+             
+
        
     msgs.append( {
         "quickReplies": {
