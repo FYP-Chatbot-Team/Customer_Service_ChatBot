@@ -11,7 +11,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#comTable').DataTable();
+            $('#comTable').DataTable({
+                ordering: true,
+                paging: true,
+                searching: true,
+                info: true,
+                lengthChange: true,
+                pageLength: 5
+            });
         });
     </script>
 </head>
@@ -51,11 +58,7 @@
     <br>
     <div class="row">
     <div class="col-md-8 offset-md-2">
-    <label>Order by:</label>
-    <select>
-    <option value="ascend">Ascending</option>
-    <option value="descend">Descending</option>
-    </select>
+    <label>Order by:</label>  
     </div>
     </div>
     <br>
@@ -79,17 +82,5 @@
         </table>
     </div></div>
     
-    <script type = text/javascript>
-        $(document).ready(function() {
-            $('#comTable').DataTable({
-                ordering:true,
-                paging:true,
-                searching:true,
-                info:true,
-                lengthChange:true,
-                pageLength:5
-            });
-        });
-    </script>
 </body>
 </html>
