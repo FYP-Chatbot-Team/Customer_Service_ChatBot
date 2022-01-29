@@ -70,14 +70,13 @@
                     <th>Count</th>
                 </tr>
             </thead>
-                {% for key, val in comment.items(): %}
+            {% for key, val in question.items(): %}
             <tr>
                 <td>{{ key }}</td>
                 <td>{{ val["Name"] }}</td>
                 <td>{{ val["Q_Count"] }}</td>
-                {% endfor %}
             </tr>
-                {% endfor %}
+            {% endfor %}
         </table>
     </div></div>
     
