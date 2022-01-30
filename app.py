@@ -164,7 +164,8 @@ def graph():
     ref = db.reference("/Questions/")
     rows = ref.order_by_child("Q_Count").limit_to_last(5).get()
     for key, val in rows.items():
-        id = key
+        #id = key
+        id = val["Name"]
         count = val["Q_Count"]
         data.append([id,count])
 
