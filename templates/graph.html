@@ -52,24 +52,27 @@
     <!--DashBoard-->
     <center><h1>NEA Dashboard</h1></center>
     <!--Top 5 Question Graph-->
-    <div class="col-sm-4 text-center" width="600" height="300">
-        <canvas id="myChart3" width="600" height="300"></canvas>
-    </div>
-    <div class="chartbox" width="600" height="300">
-        <!--Customer Rating Graph-->
-        <div class="col-sm-4 text-center" width="300" height="150">
-            <canvas id="myChart" width="100" height="100"></canvas>
+    <div class="chartbox" width="1200" height="600">
+        <div class="chartbox" width="600" height="300">
+            <div class="col-sm-4 text-center" width="600" height="300">
+                <canvas id="myChart3" width="600" height="100"></canvas>
+            </div>
         </div>
-        <br>
-        <!--Topic Frequency Graph-->
-        <div class="col-sm-4 text-center" width="300" height="150">
-            <canvas id="myChart2" width="100" height="100"></canvas>
+        <div class="chartbox" width="600" height="300">
+            <!--Customer Rating Graph-->
+            <div class="col-sm-4 text-center" width="300" height="150">
+                <canvas id="myChart" width="100" height="100"></canvas>
+            </div>
+            <br>
+            <!--Topic Frequency Graph-->
+            <div class="col-sm-4 text-center" width="300" height="150">
+                <canvas id="myChart2" width="100" height="100"></canvas>
+            </div>
         </div>
     </div>
 
-
-    <!--Customer Rating Graph Script-->
-    <script>
+        <!--Customer Rating Graph Script-->
+        <script>
     var ctx = document.getElementById("myChart");
     var Barchart = new Chart(ctx, {
         type: 'bar',
@@ -98,10 +101,10 @@
             }
         }
         });
-    </script>
+        </script>
 
-    <!--Topic Frequency Graph Script-->
-    <script>
+        <!--Topic Frequency Graph Script-->
+        <script>
     var ctx = document.getElementById("myChart2");
     var Barchart = new Chart(ctx, {
         type: 'bar',
@@ -130,10 +133,10 @@
             }
         }
         });
-    </script>
+        </script>
 
-    <!--Top 5 Question Graph Script-->
-    <script>
+        <!--Top 5 Question Graph Script-->
+        <script>
     var ctx = document.getElementById("myChart3");
     var Barchart = new Chart(ctx, {
         type: 'horizontalBar',
@@ -162,6 +165,6 @@
             }
         }
         });
-    </script>
+        </script>
 </body>
 </html>
