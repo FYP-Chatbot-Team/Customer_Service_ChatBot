@@ -52,14 +52,8 @@ def info_for_illegal_dumping(data):
                msgs.append({"text": {"text":[i]}})
 
        
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})     
 
     reply["fulfillmentMessages"] = msgs
 
@@ -104,14 +98,9 @@ def dumping_vs_waste(data):
                msgs.append({"text": {"text":[i]}})
 
        
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})  
+    
     reply["fulfillmentMessages"] = msgs
 
     return reply
@@ -156,14 +145,8 @@ def team_in_charge_of_bulky_waste(data):
 
 
        
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})     
 
 
     reply["fulfillmentMessages"] = msgs
@@ -213,14 +196,8 @@ def team_in_charge_of_illegal_dumping(data):
              
 
        
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})     
 
     reply["fulfillmentMessages"] = msgs
 
@@ -266,14 +243,8 @@ def Characteristics_of_illegal_dumping(data):
                msgs.append({"text": {"text":[i]}})
 
        
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})     
 
     reply["fulfillmentMessages"] = msgs
 

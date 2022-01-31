@@ -49,14 +49,8 @@ def Advise_for_compoundable_26N_LOR(data):
             for i in ar:
                msgs.append({"text": {"text":[i]}})
        
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})     
 
     reply["fulfillmentMessages"] = msgs
 
@@ -100,14 +94,8 @@ def Need_go_to_court_for_settled_C14_fine(data):
             for i in ar:
                msgs.append({"text": {"text":[i]}})
     
-    msgs.append( {
-        "quickReplies": {
-          "title": "Do you need anymore enquires ? 😊",
-          "quickReplies": [
-            "Yes",
-            "No"
-          ]
-        }})    
+    msgs.append({"text": {"text":["Do you need anymore enquires ? 😊 "]}})  
+    msgs.append({"text": {"text":["Type Yes or No "]}})      
 
     reply["fulfillmentMessages"] = msgs
 
