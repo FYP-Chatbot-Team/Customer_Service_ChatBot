@@ -12,7 +12,11 @@
     <script>
         $(document).ready(function () {
             $('#comTable').DataTable({
-                "pagingType": "full_numbers"
+                pageLength: 5,
+	            info: true,
+	            lengthChange: false,
+	            searching:true,
+	            pagingType: "full_numbers"
             });
         });
     </script>
