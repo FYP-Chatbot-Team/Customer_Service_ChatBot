@@ -51,12 +51,6 @@
     </style>
     <!--DashBoard-->
     <center><h1>NEA Dashboard</h1></center>
-    <!--Top 5 Question Graph-->
-        <div class="chartbox" width="600" height="600">
-            <div class="col-sm-8 text-center" width="600" height="600">
-                <canvas id="myChart3" width="1000" height="400"></canvas>
-            </div>
-        </div>
         <div class="chartbox" width="600" height="300">
             <!--Customer Rating Graph-->
             <div class="col-sm-4 text-center" width="300" height="150">
@@ -131,38 +125,6 @@
             }
         }
         });
-        </script>
-
-        <!--Top 5 Question Graph Script-->
-        <script>
-    var ctx = document.getElementById("myChart3");
-    var Barchart = new Chart(ctx, {
-        type: 'horizontalBar',
-        data: {
-            labels: {{ labels2 | safe }},
-        datasets: [{
-                label: "Frequency:",
-                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                data: {{ values2 | safe }}
-            }]
-            },
-        options: {
-            legend: { display: false },
-            title: {
-                display: true,
-                text: "Top 5 Question Graph"
-            },
-            maintainAspectRation: true,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        stepSize: 10,
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-        });
-        </script>
+        </script>       
 </body>
 </html>
