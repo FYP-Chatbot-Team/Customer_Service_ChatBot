@@ -12,11 +12,12 @@
     <script>
         $(document).ready(function () {
             $('#comTable').DataTable({
-                pageLength: 5,
-	            info: true,
-	            lengthChange: true,
-	            searching:true,
-		    "pagingType": "first_last_numbers"
+                ordering: true,
+                paging: true,
+                searching: true,
+                info: true,
+                lengthChange: true,
+                pageLength: 5
             });
         });
     </script>
