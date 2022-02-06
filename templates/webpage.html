@@ -59,24 +59,8 @@
             <img src="https://lh3.googleusercontent.com/NPfbRRSaj6pAjKajSKdURlAJQechNdYcAI4I6bTCDuhTdpPth6Eh_IPK7Md57nhu64v7c_kmydhJxxjaLQbjRmjem23kjNuMFgSaFwaFVdCpaUeWtAhdnjaVxbaaFCQuQWfmhOiQQ7N1QzUQq3iGsV4_lVnkKW0YhzNlHG_hXpr03uk190W5qEN71Br5jcdDFJ8qFGe2g-oswrjMtkz7n2SV478yyyJBAvYLv7oBvqnjFspIK0iBEZbatezX9YgdQreSW4vEWs5elcc-4klSibIQlS0SDNmwkbGN_hwl36XE3H5hc3sh9rd4eJUEHh0oC6FN2rkISvOq6xvTAAfeq0NOM1x_OhreyGLPGyDzMa6WnLyvQc7tsdBo_qzf557grcY1gIhpbYiTaGs6M-Axx8I3QdExB6XJ2nSmmEYWQT7HK3f7sPEIEQlYH1r9BZj0O-PLoi6ulGzkzx_7tXfeGKgZFUNO5BilSnopisme7gaoG4HgRFTgRzcrdBcOgTJGmVE61cAnJQJEGL0qt6Oju1gvf9KlJfduucUjm4CmVno2swIQcbJbWakRsWIWImxYPdCqvX-IlsnabcOocz4e82yEWhVVsBIh8DCTfE3owBycrcKo7g2OUlYit9n5MaEObLtkBI7M5lhn0x8w44sZefw6DcNCDCSh3vm0WfccjqH-X3qpzQPGcSSmArWUpshVXHdcHKZhFWgd6zQEVJM_Tg=w558-h498-no?authuser=2" width="350" height="350" />
         </main>
     </div>
-    <script>!(function () {
-            let e = document.createElement("script"),
-                t = document.head || document.getElementsByTagName("head")[0];
-            (e.src =
-                "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
-                (e.async = !0),
-                (e.onload = () => {
-                    window.WebChat.default(
-                        {
-                            customData: { language: "en" },
-                            socketUrl: "https://rasa-nea-chatbot.herokuapp.com",
-                        },
-                        null
-                    );
-                }),
-                t.insertBefore(e, t.firstChild);
-        })();
-    </script>
+    <div id="rasa-chat-widget" data-websocket-url="https://rasa-nea-chatbot.herokuapp.com/"></div>
+    <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
 
     <footer class="border-top footer text-muted">
         <div class="container">
